@@ -158,7 +158,7 @@ const SITE_CONFIG = {
     "Want a version like this? Join the community and use the template starter to build and deploy your own portfolio.",
   templatePromoCommunityLabel: "Learn in the Community",
   templatePromoGithubLabel: "Get the Template",
-  skoolUrl: "https://www.skool.com/security-builder-lab-2699",
+  skoolUrl: "https://www.skool.com/cloud-security-lab",
   templateRepoUrl: "https://github.com/botz-pillar/your-security-portfolio",
 
   /*
