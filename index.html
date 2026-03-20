@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>[YOUR_SITE_NAME] | [YOUR_SHORT_SITE_TITLE]</title>
+  <meta
+    name="description"
+    content="A cloud security portfolio built to showcase AWS projects, technical depth, and hands-on implementation experience."
+  />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* Homepage hero profile override
+       Keeps the lower-right identity area centered, prominent,
+       and visually complete beneath the JSON preview. */
+    .hero-profile-showcase {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      width: min(100%, 430px);
+      min-height: 255px;
+      margin: 0 auto;
+      padding: 0.5rem 0 0.25rem;
+    }
+
+    .hero-profile-photo-wrap-showcase {
+      width: 184px;
+      height: 184px;
+      justify-self: center;
+    }
+
+    .hero-profile-text-showcase {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      gap: 0.15rem;
+    }
+
+    .hero-profile-text-showcase strong {
+      font-size: 2.7rem;
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+    }
+
+    @media (max-width: 700px) {
+      .hero-profile-showcase {
+        grid-template-columns: 126px 1fr;
+        gap: 1rem;
+        width: 100%;
+        min-height: 0;
+      }
+
+      .hero-profile-photo-wrap-showcase {
+        width: 124px;
+        height: 124px;
+      }
+
+      .hero-profile-text-showcase strong {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Go to homepage">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text" data-site-name>[YOUR_SITE_NAME]</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow" data-site-tagline>Cloud Security • AWS • Detection • Secure Architecture</div>
+
+          <h1 data-home-hero-title>
+            I build safer cloud environments through practical security engineering.
+          </h1>
+
+          <p class="hero-text" data-home-hero-subtitle>
+            This portfolio highlights AWS projects, security tooling, architecture decisions, and technical work that demonstrate how I approach cloud security in practice.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="projects.html" data-cta-view-projects>
+              View Projects
+            </a>
+
+            <a
+              class="button button-secondary"
+              data-site-resume
+              href="[YOUR_RESUME_URL]"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-site-resume-label
+            >
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card hero-card-stack" aria-label="Portfolio preview and profile">
+          <div class="terminal">
+            <div class="terminal-top">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="terminal-label" data-manifest-portfolio-label>portfolio-overview.json</span>
+            </div>
+
+            <div class="terminal-body">
+              <p class="code-line">{</p>
+              <p class="code-line">  "<span class="code-key">name</span>": "<span class="code-value" data-site-full-name>[YOUR_FULL_NAME]</span>",</p>
+              <p class="code-line">  "<span class="code-key">role</span>": "<span class="code-value" data-site-role-title>[YOUR_ROLE_TITLE]</span>",</p>
+              <p class="code-line">  "<span class="code-key">focus</span>": [</p>
+              <p class="code-line">    "<span class="code-value" data-focus-area-one-title>AWS Security Projects</span>",</p>
+              <p class="code-line">    "<span class="code-value" data-focus-area-two-title>Detection &amp; Security Tooling</span>",</p>
+              <p class="code-line">    "<span class="code-value" data-focus-area-three-title>Architecture &amp; Technical Writeups</span>"</p>
+              <p class="code-line">  ],</p>
+              <p class="code-line">  "<span class="code-key">featured_project</span>": "<span class="code-value" data-featured-project-title>Security Portfolio Platform in AWS</span>",</p>
+              <p class="code-line">  "<span class="code-key">deployment</span>": "<span class="code-value" data-starter-project-stack-short>HTML • CSS • AWS S3 • CloudFront • Terraform</span>",</p>
+              <p class="code-line">  "<span class="code-key">outcome</span>": "<span class="code-value" data-starter-project-outcome>A professional site for presenting projects, technical depth, and cloud security experience.</span>"</p>
+              <p class="code-line">}</p>
+            </div>
+          </div>
+
+          <div class="hero-profile-minimal hero-profile-showcase">
+            <div class="hero-profile-photo-wrap hero-profile-photo-wrap-showcase">
+              <img
+                data-site-headshot
+                src="assets/img/headshot.png"
+                alt="Profile image preview"
+                class="hero-profile-photo"
+              />
+            </div>
+
+            <div class="hero-profile-text hero-profile-text-showcase" aria-label="Profile identity">
+              <strong data-site-first-name>[YOUR_FIRST_NAME]</strong>
+              <strong data-site-last-name>[YOUR_LAST_NAME]</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="info-strip">
+      <div class="container">
+        <div class="info-panel">
+          <div class="info-item">
+            <h3 data-home-value-one-title>Cloud Security Experience</h3>
+            <p data-home-value-one-body>
+              Explore hands-on work related to AWS security, hardening, logging, detection, and architecture decisions in real technical environments.
+            </p>
+          </div>
+
+          <div class="info-item">
+            <h3 data-home-value-two-title>Projects That Show How I Work</h3>
+            <p data-home-value-two-body>
+              See projects, labs, and writeups that make my technical approach easier to evaluate than a resume bullet ever could.
+            </p>
+          </div>
+
+          <div class="info-item">
+            <h3 data-home-value-three-title>Security Architecture Thinking</h3>
+            <p data-home-value-three-body>
+              This portfolio includes projects and writeups that show how I approach secure design, implementation decisions, and technical tradeoffs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="featured-project">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Project</h2>
+          <p>
+            A featured project gives hiring managers, recruiters, and peers a strong starting point for understanding the kind of work I do and how I approach implementation.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-main">
+            <span class="project-tag" data-starter-project-label>Starter Project</span>
+
+            <h3 data-featured-project-title>Security Portfolio Platform in AWS</h3>
+
+            <p data-featured-project-short-description>
+              A practical static portfolio platform built with HTML, CSS, AWS S3, CloudFront, and Terraform. This project serves as both a live portfolio foundation and a repeatable example of cloud-hosted technical implementation presented in a professional way.
+            </p>
+
+            <ul class="feature-list">
+              <li>Demonstrates practical AWS hosting and deployment decisions</li>
+              <li>Shows hands-on work across infrastructure, configuration, and delivery</li>
+              <li>Establishes a strong foundation for future labs, projects, and writeups</li>
+              <li>Reflects a clear, professional approach to technical implementation</li>
+            </ul>
+
+            <div class="hero-actions feature-actions">
+              <a class="button button-primary" href="projects.html" data-cta-browse-projects>
+                Browse Projects
+              </a>
+              <a class="button button-secondary" href="contact.html">
+                Connect
+              </a>
+            </div>
+          </div>
+
+          <aside class="feature-side">
+            <div class="meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Role</span>
+                <span data-site-role-title>[YOUR_ROLE_TITLE]</span>
+              </div>
+
+              <div class="meta-item">
+                <span class="meta-label">Focus</span>
+                <span data-site-focus-line>Cloud security, secure architecture, and hands-on implementation across AWS environments.</span>
+              </div>
+
+              <div class="meta-item">
+                <span class="meta-label">Primary Outcome</span>
+                <span data-starter-project-outcome>A professional site for presenting projects, technical depth, and cloud security experience.</span>
+              </div>
+
+              <div class="meta-item">
+                <span class="meta-label">Stack</span>
+                <span data-starter-project-stack-short>HTML • CSS • AWS S3 • CloudFront • Terraform</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="focus-areas">
+      <div class="container">
+        <div class="section-header">
+          <h2>Focus Areas</h2>
+          <p>
+            These categories help frame the kinds of work most relevant to cloud security roles, technical leadership conversations, and hands-on implementation opportunities.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <h3 data-focus-area-one-title>AWS Security Projects</h3>
+            <p data-focus-area-one-description>
+              Hands-on work involving AWS architecture, security controls, hardening decisions, and cloud-focused implementation.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 data-focus-area-two-title>Detection &amp; Security Tooling</h3>
+            <p data-focus-area-two-description>
+              Projects involving logging, monitoring, detection workflows, and security platforms that support stronger operational visibility.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 data-focus-area-three-title>Architecture &amp; Technical Writeups</h3>
+            <p data-focus-area-three-description>
+              Technical notes and structured writeups that explain design choices, implementation logic, and security reasoning clearly.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-template-promo>
+      <div class="container">
+        <div class="cta-panel">
+          <h2 data-template-promo-title>Build your own portfolio</h2>
+          <p data-template-promo-text>
+            Want a version like this? Join the community and use the template starter to build and deploy your own portfolio.
+          </p>
+
+          <div class="cta-actions">
+            <a
+              class="button button-primary"
+              data-site-skool
+              href="https://www.skool.com/security-builder-lab-2699"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-template-promo-community-label
+            >
+              Learn in the Community
+            </a>
+            <a
+              class="button button-secondary"
+              data-site-template-repo
+              href="[YOUR_TEMPLATE_REPO_URL]"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-template-promo-github-label
+            >
+              Get the Template
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div data-site-footer>© 2026 [YOUR_SITE_NAME]</div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

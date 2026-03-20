@@ -1,0 +1,16 @@
+.DS_Store
+
+# Terraform local working files
+site/.terraform/
+site/terraform.tfstate
+site/terraform.tfstate.*
+
+# Terraform crash / override files
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Optional: ignore local editor/system clutter
+.vscode/
