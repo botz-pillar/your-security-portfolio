@@ -8,12 +8,13 @@
   <meta
     name="description"
     content="A cloud security project page covering AWS hosting, Terraform-managed infrastructure, and the technical decisions behind a live portfolio platform."
+    data-meta-description="projectMetaDescription"
   />
 
   <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
-<body>
+<body data-page-id="project-detail">
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="logo" aria-label="Go to homepage">
@@ -120,27 +121,27 @@ outcomes:
       <div class="container project-content-grid">
         <div class="project-content-main">
           <section class="project-section">
-            <h2>Project Overview</h2>
-            <p>
+            <h2 data-project-portfolio-overview-heading>Project Overview</h2>
+            <p data-project-portfolio-overview-body>
               This project is a cloud-hosted portfolio platform designed to present technical work in a clear, structured way. Instead of relying only on a resume or LinkedIn summary, it provides a live environment where projects, labs, and technical writeups can be organized and explained with more context.
             </p>
           </section>
 
           <section class="project-section">
-            <h2>Problem It Solves</h2>
-            <p>
+            <h2 data-project-portfolio-problem-heading>Problem It Solves</h2>
+            <p data-project-portfolio-problem-body>
               A lot of strong technical work stays buried in private notes, internal projects, or short resume bullets. That makes it harder for hiring managers, recruiters, and peers to understand what someone has actually built. This project solves that by creating a professional site where technical work can be presented more clearly and evaluated more easily.
             </p>
           </section>
 
           <section class="project-section">
-            <h2>Architecture Overview</h2>
-            <p>
+            <h2 data-project-portfolio-arch-heading>Architecture Overview</h2>
+            <p data-project-portfolio-arch-body>
               The platform uses a static front end for speed, simplicity, and low operational overhead. Site files are stored in Amazon S3 and delivered through CloudFront, while Terraform manages the infrastructure configuration. This keeps the implementation approachable while still reflecting real cloud deployment decisions and a more disciplined infrastructure workflow.
             </p>
 
             <div class="project-placeholder">
-              <p>[Add architecture diagram, deploy screenshot, or AWS console image here later]</p>
+              <p data-project-portfolio-arch-placeholder>[Add architecture diagram, deploy screenshot, or AWS console image here later]</p>
             </div>
           </section>
 
@@ -156,8 +157,8 @@ outcomes:
           </section>
 
           <section class="project-section">
-            <h2>What This Demonstrates</h2>
-            <p>
+            <h2 data-project-portfolio-demo-heading>What This Demonstrates</h2>
+            <p data-project-portfolio-demo-body>
               This project demonstrates practical cloud security-adjacent engineering skills: working with AWS delivery patterns, using infrastructure as code, making architecture choices that balance simplicity and usefulness, and presenting technical work in a way that is easier for others to understand and assess.
             </p>
           </section>
@@ -174,8 +175,8 @@ outcomes:
           </section>
 
           <section class="project-section">
-            <h2>Why It Works as a Portfolio Foundation</h2>
-            <p>
+            <h2 data-project-portfolio-why-heading>Why It Works as a Portfolio Foundation</h2>
+            <p data-project-portfolio-why-body>
               A strong portfolio foundation needs to be simple enough to maintain, flexible enough to grow, and professional enough to share. This project meets that standard by giving future work a home that is already live, already structured, and already aligned to how technical experience is usually evaluated.
             </p>
           </section>
@@ -188,22 +189,22 @@ outcomes:
             <div class="project-sidebar-list">
               <div class="project-sidebar-item">
                 <span class="project-sidebar-label">Project Type</span>
-                <strong>Cloud-Hosted Portfolio Platform</strong>
+                <strong data-project-portfolio-snapshot-type>Cloud-Hosted Portfolio Platform</strong>
               </div>
 
               <div class="project-sidebar-item">
                 <span class="project-sidebar-label">Best For</span>
-                <strong>Presenting projects, labs, and technical writeups clearly</strong>
+                <strong data-project-portfolio-snapshot-best-for>Presenting projects, labs, and technical writeups clearly</strong>
               </div>
 
               <div class="project-sidebar-item">
                 <span class="project-sidebar-label">Hosting Model</span>
-                <strong>AWS S3 + CloudFront</strong>
+                <strong data-project-portfolio-snapshot-hosting>AWS S3 + CloudFront</strong>
               </div>
 
               <div class="project-sidebar-item">
                 <span class="project-sidebar-label">Infrastructure</span>
-                <strong>Terraform</strong>
+                <strong data-project-portfolio-snapshot-infra>Terraform</strong>
               </div>
 
               <div class="project-sidebar-item">

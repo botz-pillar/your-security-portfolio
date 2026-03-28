@@ -1,127 +1,3 @@
-
-# Troubleshooting
-
-## AWS CLI Not Working
-
-Check:
-
-```bash
-aws --version
-aws sts get-caller-identity
-```
-
-If credentials are not working, re-run:
-
-```bash
-aws configure
-```
-
-## Terraform Red Warnings in VS Code
-
-If VS Code shows red Terraform errors but commands still work, run:
-
-```bash
-terraform validate
-```
-
-If validation passes, save all files and reload VS Code.
-
-## `terraform plan` Shows No Changes Unexpectedly
-
-Check:
-
-- your `.tf` files are not empty
-- your files were saved
-- you are inside the correct `site/` folder
-
-## Bucket Name Already Taken
-
-S3 bucket names must be globally unique.
-
-Update `bucket_name` in `site/terraform.tfvars`, then run:
-
-```bash
-terraform plan
-```
-
-## Site Looks Unstyled After Deploy
-
-Usually this means:
-
-- CSS files did not upload
-- CloudFront is serving cached files
-- a file path is wrong
-
-Run:
-
-```bash
-bash scripts/deploy-site.sh
-```
-
-Then hard refresh the browser.
-
-## Headshot or Images Not Showing
-
-Check:
-
-- the image file exists in `assets/img/`
-- the filename matches exactly
-- the path in `main.js` is correct
-
-## Email Button Not Working
-
-Check the `email` value in:
-
-- `assets/js/main.js`
-
-That value controls the `mailto:` link.
-
-## CloudFront Invalidation Command Gets Stuck
-
-If your terminal shows `dquote>`, the quote marks were entered incorrectly.
-
-Press:
-
-- `Control + C`
-
-Then re-run the command carefully.
-
-## Nested Project Page Looks Broken
-
-Check that nested pages use `../` for shared assets.
-
-Examples:
-
-- `../assets/css/style.css`
-- `../assets/js/main.js`
-- `../assets/img/favicon.svg`
-
-## `terraform destroy` Fails
-
-The S3 bucket may still contain files.
-
-Empty it first:
-
-```bash
-aws s3 rm s3://YOUR_BUCKET_NAME --recursive
-```
-
-Then run:
-
-```bash
-terraform destroy
-```
-
-## Best Reset Rule
-
-If something feels off:
-
-1. save all files
-2. validate Terraform if needed
-3. preview locally
-4. redeploy with the script
-5. hard refresh the browser
-
 # Troubleshooting
 
 ## Start With The Simplest Checks
@@ -237,9 +113,7 @@ Recommended default image files:
 
 ## Email Button Not Working
 
-Check the `email` value in:
-
-- `assets/js/main.js`
+Check the `email` value in `assets/js/main.js`.
 
 That value controls the `mailto:` link.
 
@@ -251,9 +125,7 @@ Also verify:
 
 ## Resume Button Not Working
 
-Check the `resumeUrl` value in:
-
-- `assets/js/main.js`
+Check the `resumeUrl` value in `assets/js/main.js`.
 
 Make sure:
 
@@ -263,7 +135,7 @@ Make sure:
 
 ## Optional Links Not Showing
 
-Optional links such as LinkedIn or GitHub may be hidden automatically if left blank in `main.js`.
+Optional links such as LinkedIn or GitHub are hidden automatically if left blank in `main.js`.
 
 Check:
 
@@ -272,7 +144,7 @@ Check:
 - `youtubeUrl`
 - `websiteUrl`
 
-If the value is blank, the related element may be hidden on purpose.
+If the value is blank, the related element is hidden on purpose. Fill in the URL to make it appear.
 
 ## Changes In `main.js` Are Not Showing On The Page
 
