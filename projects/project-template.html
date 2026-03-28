@@ -1,0 +1,296 @@
+<!--
+  ============================================================
+  PROJECT TEMPLATE
+  ============================================================
+
+  HOW TO USE THIS TEMPLATE:
+
+  1. Copy this file and rename it for your project.
+     Example: cp project-template.html aws-hardening-lab.html
+
+  2. Replace ALL placeholder text (marked with [BRACKETS]).
+     Search for "[" to find them quickly.
+
+  3. Update the content sections with your own project details.
+     You can add, remove, or reorder sections as needed.
+
+  4. Add a link to your new project from projects.html.
+     Copy one of the existing project cards and update it.
+
+  5. Preview locally, then deploy.
+
+  WHAT IS ALREADY WIRED TO main.js:
+  - data-site-name, data-site-role-title, data-site-full-name
+  - data-site-resume, data-site-resume-label
+  - data-site-headshot, data-site-favicon
+  - data-site-footer, data-site-skool, data-site-template-repo
+  - data-template-promo-title, data-template-promo-text
+  - data-template-promo-community-label, data-template-promo-github-label
+  - data-cta-browse-projects
+
+  WHAT YOU REPLACE DIRECTLY IN THIS FILE:
+  - Project title, description, and all content sections
+  - Sidebar metadata (stack, type, outcomes)
+  - Implementation notes and bullet points
+  - The <title> tag text
+
+  OPTIONAL: You can also add new keys to SITE_CONFIG in main.js
+  and wire them up with data-* attributes if you want to centralize
+  content for a project you reference in multiple places.
+  ============================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>[PROJECT TITLE] | [YOUR_SITE_NAME]</title>
+  <meta
+    name="description"
+    content="[A one-sentence description of this project for search engines and social sharing.]"
+  />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body data-page-id="project-detail">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Go to homepage">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text" data-site-name>[YOUR_SITE_NAME]</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="container project-hero-grid">
+        <div class="project-hero-copy">
+          <div class="eyebrow">[PROJECT CATEGORY] • [PROJECT THEME]</div>
+          <h1 class="project-title">[PROJECT TITLE]</h1>
+
+          <p class="project-lead">
+            [A 1-2 sentence summary of the project. What is it, what does it do, and why does it matter? This is the first thing a visitor reads.]
+          </p>
+
+          <div class="project-hero-actions">
+            <a class="button button-primary" href="../projects.html" data-cta-browse-projects>
+              Browse Projects
+            </a>
+
+            <a
+              class="button button-secondary"
+              data-site-resume
+              href="[YOUR_RESUME_URL]"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-site-resume-label
+            >
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <aside class="project-hero-card" aria-label="Project architecture summary">
+          <div class="manifest-window">
+            <div class="manifest-top">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="manifest-label">[project-name].yml</span>
+            </div>
+
+            <div class="manifest-body">
+<pre class="manifest-code">project:
+  name: [project-name]
+  status: [in-progress | complete | live]
+
+focus:
+  - [focus-area-one]
+  - [focus-area-two]
+  - [focus-area-three]
+
+outcomes:
+  - [outcome-one]
+  - [outcome-two]
+  - [outcome-three]</pre>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-content-grid">
+        <div class="project-content-main">
+          <section class="project-section">
+            <h2>Project Overview</h2>
+            <p>
+              [Describe the project in 2-3 sentences. What does it do? What problem does it address? Why did you build it?]
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Problem It Solves</h2>
+            <p>
+              [Explain the problem or gap this project addresses. Why does this matter to someone evaluating your skills? Think about your audience: hiring managers, recruiters, technical peers.]
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Architecture Overview</h2>
+            <p>
+              [Describe the high-level architecture. What services, tools, or technologies are involved? How do they connect? Keep it clear enough for a non-expert to follow.]
+            </p>
+
+            <div class="project-placeholder">
+              <p>[Add architecture diagram, screenshot, or terminal output here]</p>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2>Implementation Notes</h2>
+            <ul class="feature-list">
+              <li>[Key implementation decision or step you took]</li>
+              <li>[Another technical choice worth highlighting]</li>
+              <li>[Something you learned or solved during the build]</li>
+              <li>[A tool, pattern, or approach you applied]</li>
+              <li>[Anything else that shows how you think and work]</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>What This Demonstrates</h2>
+            <p>
+              [Explain what skills this project proves. Connect it to the kind of role you are targeting. What should a reviewer take away from seeing this work?]
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>What I Learned</h2>
+            <p>
+              [Be honest about what you learned. This is a strength, not a weakness. Hiring managers value self-awareness and growth. What would you do differently next time?]
+            </p>
+          </section>
+        </div>
+
+        <aside class="project-sidebar">
+          <div class="project-sidebar-card">
+            <h3>Project Snapshot</h3>
+
+            <div class="project-sidebar-list">
+              <div class="project-sidebar-item">
+                <span class="project-sidebar-label">Project Type</span>
+                <strong>[e.g., Security Lab, AWS Deployment, Detection Pipeline]</strong>
+              </div>
+
+              <div class="project-sidebar-item">
+                <span class="project-sidebar-label">Best For</span>
+                <strong>[e.g., Showing AWS hardening skills, Demonstrating detection logic]</strong>
+              </div>
+
+              <div class="project-sidebar-item">
+                <span class="project-sidebar-label">Status</span>
+                <strong>[In Progress | Complete | Live]</strong>
+              </div>
+
+              <div class="project-sidebar-item">
+                <span class="project-sidebar-label">Primary Outcome</span>
+                <strong>[One sentence describing the key result]</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-sidebar-card">
+            <h3>Core Technologies</h3>
+            <div class="project-card-meta">
+              <span>[Tech 1]</span>
+              <span>[Tech 2]</span>
+              <span>[Tech 3]</span>
+              <span>[Tech 4]</span>
+            </div>
+          </div>
+
+          <div class="project-sidebar-card">
+            <h3>What Reviewers Can See Here</h3>
+            <ul class="project-links">
+              <li>[Skill or competency this proves]</li>
+              <li>[Another thing a reviewer should notice]</li>
+              <li>[How this connects to a real job requirement]</li>
+            </ul>
+          </div>
+
+          <div class="project-sidebar-card">
+            <h3>Next Links</h3>
+            <ul class="project-links">
+              <li><a href="../projects.html">Back to projects</a></li>
+              <li><a href="../about.html">About this portfolio</a></li>
+              <li><a href="../contact.html">Connect</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" data-template-promo>
+      <div class="container">
+        <div class="cta-panel">
+          <h2 data-template-promo-title>Build your own portfolio</h2>
+
+          <p data-template-promo-text>
+            Want a version like this? Join the AI Cloud Security Lab community and use this template to build, deploy, and launch your own portfolio.
+          </p>
+
+          <div class="cta-actions">
+            <a
+              class="button button-primary"
+              data-site-skool
+              href="https://www.skool.com/cloud-security-lab"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-template-promo-community-label
+            >
+              Join the AI Cloud Security Lab
+            </a>
+
+            <a
+              class="button button-secondary"
+              data-site-template-repo
+              href="https://github.com/botz-pillar/your-security-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-template-promo-github-label
+            >
+              Get the Template
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div data-site-footer>© 2026 [YOUR_SITE_NAME]</div>
+
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
