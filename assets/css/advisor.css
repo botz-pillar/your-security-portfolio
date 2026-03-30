@@ -1,13 +1,16 @@
 /* ================================================
    AI SECURITY ADVISOR — CHAT UI
    Shared styles for the advisor widget.
-   Include on any page that uses the advisor.
+   Uses the portfolio's CSS variables from style.css:
+   --bg, --bg-alt, --panel, --panel-strong, --text,
+   --muted, --accent, --accent-2, --border, --silver
    ================================================ */
 
 .advisor-section {
-  border-top: 1px solid var(--border, #334155);
-  border-bottom: 1px solid var(--border, #334155);
-  background: var(--surface-dim, #0f172a);
+  background: var(--bg-alt);
+  border-top: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding: 3rem 0;
 }
 
 .advisor-container {
@@ -24,21 +27,35 @@
 }
 
 .advisor-intro h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.6rem;
+  color: var(--text);
+  margin: 0 0 0.25rem;
+}
+
+.advisor-intro .advisor-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
 }
 
 .advisor-intro p {
-  color: var(--text-secondary, #94a3b8);
+  color: var(--muted);
   font-size: 0.95rem;
   max-width: 600px;
   margin: 0.5rem auto 0;
 }
 
 .chat-window {
-  background: var(--surface, #1e293b);
-  border: 1px solid var(--border, #334155);
-  border-radius: 12px;
+  background: var(--panel-strong);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm, 12px);
   min-height: 340px;
   max-height: 460px;
   overflow-y: auto;
@@ -77,19 +94,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .chat-message.user .chat-avatar {
-  background: var(--accent, #3b82f6);
+  background: var(--accent);
   color: #fff;
 }
 
 .chat-message.assistant .chat-avatar {
-  background: var(--accent-secondary, #8b5cf6);
-  color: #fff;
+  background: var(--accent-2);
+  color: var(--black, #131313);
 }
 
 .chat-bubble {
@@ -101,14 +118,15 @@
 }
 
 .chat-message.user .chat-bubble {
-  background: var(--accent, #3b82f6);
+  background: var(--accent);
   color: #fff;
   border-bottom-right-radius: 3px;
 }
 
 .chat-message.assistant .chat-bubble {
-  background: var(--surface-raised, #273449);
-  color: var(--text-primary, #e2e8f0);
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
   border-bottom-left-radius: 3px;
 }
 
@@ -121,7 +139,7 @@
 .chat-typing span {
   width: 7px;
   height: 7px;
-  background: var(--text-secondary, #94a3b8);
+  background: var(--muted);
   border-radius: 50%;
   animation: typingDot 1.2s ease-in-out infinite;
 }
@@ -142,11 +160,11 @@
 
 .chat-input {
   flex: 1;
-  background: var(--surface, #1e293b);
-  border: 1px solid var(--border, #334155);
+  background: var(--panel-strong);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0.75rem 1rem;
-  color: var(--text-primary, #e2e8f0);
+  color: var(--text);
   font-size: 0.95rem;
   font-family: inherit;
   resize: none;
@@ -158,15 +176,15 @@
 }
 
 .chat-input:focus {
-  border-color: var(--accent, #3b82f6);
+  border-color: var(--accent);
 }
 
 .chat-input::placeholder {
-  color: var(--text-secondary, #94a3b8);
+  color: var(--muted);
 }
 
 .chat-send {
-  background: var(--accent, #3b82f6);
+  background: var(--accent);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -175,35 +193,41 @@
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
-  transition: opacity 0.15s;
+  transition: background 0.15s;
 }
 
-.chat-send:hover { opacity: 0.9; }
+.chat-send:hover { background: var(--accent-hover); }
 .chat-send:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .advisor-footer-note {
   text-align: center;
   font-size: 0.78rem;
-  color: var(--text-secondary, #94a3b8);
-  opacity: 0.7;
+  color: var(--muted);
+  opacity: 0.6;
 }
 
 .advisor-setup-notice {
-  background: var(--surface-raised, #273449);
-  border: 1px solid var(--border, #334155);
-  border-radius: 10px;
-  padding: 1.25rem 1.5rem;
+  background: var(--panel-strong);
+  border: 2px dashed var(--accent);
+  border-radius: var(--radius-sm, 12px);
+  padding: 2rem 1.5rem;
   text-align: center;
 }
 
+.advisor-setup-notice strong {
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
 .advisor-setup-notice p {
-  color: var(--text-secondary, #94a3b8);
+  color: var(--muted);
   font-size: 0.9rem;
   margin: 0.5rem 0 0;
 }
 
 .advisor-setup-notice code {
-  background: var(--surface, #1e293b);
+  background: var(--bg);
+  color: var(--accent-2);
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
   font-size: 0.85rem;
@@ -218,22 +242,26 @@
 }
 
 .sample-question {
-  background: var(--surface-raised, #273449);
-  border: 1px solid var(--border, #334155);
+  background: var(--panel);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0.5rem 0.85rem;
   font-size: 0.82rem;
-  color: var(--text-secondary, #94a3b8);
+  color: var(--muted);
   cursor: pointer;
   transition: border-color 0.15s, color 0.15s;
 }
 
 .sample-question:hover {
-  border-color: var(--accent, #3b82f6);
-  color: var(--text-primary, #e2e8f0);
+  border-color: var(--accent);
+  color: var(--text);
 }
 
 @media (max-width: 700px) {
+  .advisor-section {
+    padding: 2rem 0;
+  }
+
   .chat-window {
     min-height: 280px;
     max-height: 380px;
