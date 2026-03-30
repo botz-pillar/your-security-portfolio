@@ -89,6 +89,7 @@ Rules:
   if (!apiKey) {
     app.innerHTML =
       '<div class="advisor-intro">' +
+        '<span class="advisor-badge">AI-Powered</span>' +
         '<h2>Ask the AI Security Advisor</h2>' +
         '<p>' + welcomeMessage + '</p>' +
       '</div>' +
@@ -108,6 +109,7 @@ Rules:
 
   app.innerHTML =
     '<div class="advisor-intro">' +
+      '<span class="advisor-badge">AI-Powered</span>' +
       '<h2>Ask the AI Security Advisor</h2>' +
       '<p>Ask about cloud security topics or about the projects and experience in this portfolio.</p>' +
     '</div>' +
