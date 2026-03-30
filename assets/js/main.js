@@ -233,7 +233,32 @@ const SITE_CONFIG = {
   contactEmailCardDesc: "Reach out directly for professional inquiries, collaboration, or questions about the projects featured here.",
   contactLinkedInCardDesc: "Connect professionally, follow my progress, and stay current on future projects and technical updates.",
   contactGitHubCardDesc: "Explore repositories, project code, and supporting files that show how the work is structured and maintained.",
-  contactWaysToConnectDesc: "Choose the option that works best — whether you want to review my work, check my background, or reach out directly."
+  contactWaysToConnectDesc: "Choose the option that works best — whether you want to review my work, check my background, or reach out directly.",
+
+  // --- AI Security Advisor ---
+  // To enable the AI advisor on your portfolio:
+  // 1. Get an API key at https://console.anthropic.com/
+  // 2. Paste it into aiAdvisorApiKey below.
+  // 3. Set spending limits on your Anthropic account to control costs.
+  // 4. Fill in aiAdvisorResumeContext with your background info.
+  //
+  // The advisor uses Claude to answer questions about cloud security
+  // and about your portfolio, projects, and experience.
+  // It runs client-side — your API key is visible in the page source.
+  // This is fine for a personal portfolio with low traffic.
+  // Set spending limits to stay safe.
+  aiAdvisorApiKey: "",
+  aiAdvisorModel: "claude-haiku-4-5-20251001",
+  aiAdvisorMaxTokens: 1024,
+  aiAdvisorWelcomeMessage: "Hi! I can answer questions about cloud security or about the projects and experience featured in this portfolio. What would you like to know?",
+  aiAdvisorSampleQuestions: [
+    "What cloud security projects are featured here?",
+    "What is the shared responsibility model in AWS?",
+    "What technologies does this portfolio use?",
+    "How does S3 bucket policy security work?"
+  ],
+  aiAdvisorResumeContext: "",
+  aiAdvisorProjectContext: ""
 };
 
 /*
