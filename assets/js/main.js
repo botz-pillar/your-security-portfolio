@@ -57,21 +57,21 @@ const SITE_CONFIG = {
   */
 
   // --- Hero / Positioning ---
-  focusLine: "Building cloud security skills through hands-on AWS projects, AI-assisted workflows, and real-world implementation.",
+  focusLine: "AWS security projects, AI-powered workflows, and cloud architecture — built by doing, not just studying.",
   siteTagline: "Cloud Security • AWS • AI-Assisted Development • Secure Architecture",
   siteTaglineShort: "Cloud Security • AWS • AI + Automation",
 
-  homeHeroTitle: "I'm building cloud security skills through hands-on projects and real AWS implementation.",
-  homeHeroSubtitle: "This portfolio showcases the projects, labs, and technical work I'm building as I launch my career in cloud security. Each project reflects real implementation, not just theory.",
+  homeHeroTitle: "I build cloud security projects in AWS that show what I can actually do.",
+  homeHeroSubtitle: "Each project here is something I designed, deployed, and documented — from Terraform infrastructure to security architecture. Browse the work and see for yourself.",
 
   projectsHeroTitle: "Projects I've built to learn cloud security and prove what I can do.",
   projectsHeroSubtitle: "This page brings together the hands-on projects, labs, and technical writeups I'm building. The goal is to show how I think, how I implement, and what I'm learning through visible, working examples.",
 
-  aboutHeroTitle: "I'm learning cloud security by building real projects and documenting every step.",
-  aboutHeroSubtitle: "This portfolio documents the projects, architecture decisions, and technical work I'm building as I grow in cloud security. The goal is to make my skills easier to see through real implementation, clear communication, and projects that show how I think.",
+  aboutHeroTitle: "I learn cloud security by building projects, not just passing exams.",
+  aboutHeroSubtitle: "I document architecture decisions, security tradeoffs, and implementation details so hiring managers and peers can evaluate my work directly — not just take my word for it.",
 
-  contactHeroTitle: "Want to see what I've been building? Start with the projects and resume.",
-  contactHeroSubtitle: "This page makes it easy to connect, review my background, and explore the work that best reflects where I am and where I'm heading in cloud security.",
+  contactHeroTitle: "Start with my AWS projects, then check the resume. The work speaks for itself.",
+  contactHeroSubtitle: "Review my projects and background directly, or reach out if you want to discuss specific work. I'm building toward cloud security roles and happy to talk about what I've shipped.",
 
   // --- Homepage Value Boxes ---
   homeValueOneTitle: "Hands-On Cloud Security Projects",
@@ -81,7 +81,7 @@ const SITE_CONFIG = {
   homeValueThreeTitle: "Learning Architecture by Building It",
   homeValueThreeBody: "Every project here includes real design decisions, security tradeoffs, and implementation notes that show how I approach problems — not just the final result.",
 
-  aboutSnapshotStrength: "Building real projects and using AI-assisted tools to learn faster and ship working implementations.",
+  aboutSnapshotStrength: "Building real projects instead of just studying for certs — using AI tools to ship faster and learn deeper.",
 
   // --- Featured Project ---
   featuredProjectTitle: "Security Portfolio Platform in AWS",
@@ -97,16 +97,16 @@ const SITE_CONFIG = {
   focusAreaOneDescription: "Hands-on projects involving AWS architecture, security controls, hardening, and cloud infrastructure — built to learn and demonstrate real implementation skills.",
   focusAreaTwoTitle: "Detection and Security Tooling",
   focusAreaTwoDescription: "Projects focused on logging, monitoring, detection workflows, and security tooling that strengthen cloud visibility and operational awareness.",
-  focusAreaThreeTitle: "AI-Assisted Development and Writeups",
-  focusAreaThreeDescription: "Technical notes, architecture writeups, and projects that show how I use AI tools to accelerate learning, build faster, and communicate technical decisions clearly.",
+  focusAreaThreeTitle: "Architecture and Technical Writeups",
+  focusAreaThreeDescription: "Structured writeups and architecture notes that explain design decisions, security reasoning, and implementation logic — some accelerated with AI tools to communicate complex ideas clearly.",
   focusAreasSectionDesc: "These categories represent the kinds of technical work most relevant to cloud security roles and hands-on implementation.",
 
   // --- Shared Short Copy ---
-  communityShort: "A cloud security portfolio built to showcase hands-on AWS projects, AI-assisted development, and real implementation experience.",
-  communityShorter: "Hands-on cloud security projects, AI-assisted workflows, and real AWS implementation in one place.",
-  starterShort: "This portfolio showcases the cloud security projects, labs, and technical work I'm building to show employers and peers what I can do and how I learn.",
-  starterShorter: "Cloud security projects, AWS labs, and hands-on work that reflect real learning and implementation.",
-  proofOfWorkShort: "This site highlights projects, labs, and technical writeups that make my cloud security skills easier to see, evaluate, and trust.",
+  communityShort: "A cloud security portfolio showcasing AWS projects, AI-powered workflows, and technical implementations built through the AI Cloud Security Lab.",
+  communityShorter: "AWS security projects and AI-powered cloud workflows — built, deployed, and documented in one place.",
+  starterShort: "Cloud security projects, AWS labs, and technical writeups that show employers what I build and how I think about security.",
+  starterShorter: "AWS security projects and technical writeups that show real implementation, not just certifications.",
+  proofOfWorkShort: "Projects, labs, and writeups that make my cloud security skills easier to evaluate and trust — built to be seen, not just described.",
 
   // --- Template Promo ---
   templatePromoTitle: "Build your own portfolio",
@@ -180,11 +180,11 @@ const SITE_CONFIG = {
 
   // --- About Page Content ---
   aboutSectionOneHeading: "What I Focus On",
-  aboutSectionOneBody: "I'm focused on cloud security, AWS architecture, and hands-on implementation. I'm building projects that show how security decisions work in real environments — not just in textbooks or flashcards.",
+  aboutSectionOneBody: "I'm focused on cloud security, AWS architecture, and applied implementation. I build projects that demonstrate how security decisions work in production-like environments — not simplified tutorials or theory exercises.",
   aboutSectionTwoHeading: "How I Approach Technical Work",
-  aboutSectionTwoBody: "I believe in learning by building. Every project in this portfolio includes real implementation decisions, clear documentation, and honest notes about what I learned. I use AI-assisted tools to move faster and stay focused on what matters — shipping working projects that demonstrate real skills.",
+  aboutSectionTwoBody: "I learn best by building. Each project here includes real implementation decisions, clear documentation, and notes on what worked and what I'd do differently. I use AI tools to move faster and stay focused on what matters — shipping working projects that demonstrate actual skills.",
   aboutSectionThreeHeading: "Why This Portfolio Exists",
-  aboutSectionThreeBody: "A resume can only say so much. This portfolio gives my work more context — it shows what I've actually built, how I think about architecture and security, and why each project matters. It is designed to make my skills easier to evaluate and my growth easier to follow.",
+  aboutSectionThreeBody: "A resume shows titles and skills. This portfolio shows the actual work — architecture decisions, problems I solved, and how I approach security challenges. That context is what hiring managers want when evaluating early-career candidates.",
 
   aboutSidebarProjectsDesc: "AWS security projects, hands-on implementations, and portfolio-ready writeups that show real work.",
   aboutSidebarArchitectureDesc: "Design decisions, security tradeoffs, and implementation notes explained clearly for technical and non-technical readers.",
@@ -211,14 +211,14 @@ const SITE_CONFIG = {
   projectPortfolioOverviewHeading: "Project Overview",
   projectPortfolioOverviewBody: "This project is a cloud-hosted portfolio platform I built to present my technical work in a clear, structured way. Instead of relying only on a resume or LinkedIn summary, it gives me a live environment where projects, labs, and technical writeups can be organized and explained with real context.",
   projectPortfolioProblemHeading: "Problem It Solves",
-  projectPortfolioProblemBody: "A lot of strong technical work stays buried in private notes, class assignments, or short resume bullets. That makes it harder for hiring managers, recruiters, and peers to understand what someone has actually built. This project solves that by creating a professional site where technical work is visible, structured, and easy to evaluate.",
+  projectPortfolioProblemBody: "Most of my early technical work was scattered — class projects in private repos, assignments with no context, skills listed as resume bullets with no proof. I wanted a place where this work was visible, organized, and actually explainable. That is what this site does.",
   projectPortfolioArchHeading: "Architecture Overview",
   projectPortfolioArchBody: "The platform uses a static front end for speed, simplicity, and low operational overhead. Site files are stored in Amazon S3 and delivered through CloudFront, while Terraform manages the infrastructure configuration. This keeps the implementation approachable while still reflecting real cloud deployment decisions and disciplined infrastructure workflow.",
   projectPortfolioArchPlaceholder: "[Add architecture diagram, deploy screenshot, or AWS console image here later]",
   projectPortfolioDemoHeading: "What This Demonstrates",
   projectPortfolioDemoBody: "This project demonstrates practical cloud engineering skills: working with AWS delivery patterns, using infrastructure as code, making architecture decisions that balance simplicity and usefulness, and presenting technical work in a way that others can understand and assess.",
   projectPortfolioWhyHeading: "Why It Works as a Portfolio Foundation",
-  projectPortfolioWhyBody: "A strong portfolio foundation needs to be simple enough to maintain, flexible enough to grow, and professional enough to share. This project meets that standard by giving my future work a home that is already live, already structured, and already aligned to how technical experience is usually evaluated.",
+  projectPortfolioWhyBody: "I built this to be simple to maintain, flexible to expand, and professional enough to share with employers. It gives my future projects a home that is already live, already structured, and aligned to how hiring managers typically evaluate technical candidates.",
   projectPortfolioSnapshotType: "Cloud-Hosted Portfolio Platform",
   projectPortfolioSnapshotBestFor: "Presenting projects, labs, and technical writeups clearly",
   projectPortfolioSnapshotHosting: "AWS S3 + CloudFront",
