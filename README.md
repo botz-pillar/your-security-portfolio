@@ -245,19 +245,20 @@ bash scripts/deploy-site.sh
 
 If you want to fully remove the AWS resources:
 
+1. Get the bucket name:
+
 ```bash
 cd site
-terraform plan -destroy
-terraform output
+terraform output bucket_name
 ```
 
-Empty the bucket first:
+2. Empty the bucket:
 
 ```bash
-aws s3 rm s3://YOUR_BUCKET_NAME --recursive
+aws s3 rm s3://<bucket_name> --recursive
 ```
 
-Then destroy:
+3. Destroy the infrastructure:
 
 ```bash
 terraform destroy

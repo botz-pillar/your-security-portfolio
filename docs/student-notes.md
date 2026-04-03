@@ -2,6 +2,13 @@
 
 # Student Notes
 
+## Prerequisites
+
+Before starting, install the required tools:
+
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- [Terraform](https://developer.hashicorp.com/terraform/install)
+
 ## Start Here
 
 Before changing anything, make sure you can:

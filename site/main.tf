@@ -88,10 +88,6 @@ resource "aws_cloudfront_distribution" "site" {
     domain_name              = aws_s3_bucket.site.bucket_regional_domain_name
     origin_id                = local.origin_id
     origin_access_control_id = aws_cloudfront_origin_access_control.site.id
-
-    s3_origin_config {
-      origin_access_identity = ""
-    }
   }
 
   default_cache_behavior {
@@ -127,7 +123,7 @@ resource "aws_cloudfront_distribution" "site" {
 
   viewer_certificate {
   cloudfront_default_certificate = true
-  minimum_protocol_version       = "TLSv1.2_2021"
+  minimum_protocol_version       = "TLSv1"
 }
 
   price_class = "PriceClass_100"

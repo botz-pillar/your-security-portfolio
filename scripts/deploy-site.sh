@@ -25,11 +25,13 @@ echo "CloudFront domain: $CLOUDFRONT_DOMAIN"
 echo ""
 echo "Syncing site files to S3..."
 aws s3 sync . "s3://$BUCKET_NAME" \
-  --exclude "*" \
-  --include "*.html" \
-  --include "assets/*" \
-  --include "assets/*/*" \
-  --include "projects/*"
+  --exclude ".git/*" \
+  --exclude ".github/*" \
+  --exclude "docs/*" \
+  --exclude "scripts/*" \
+  --exclude "site/*" \
+  --exclude "README.md" \
+  --exclude "*.md"
 
 echo ""
 echo "Creating CloudFront invalidation..."

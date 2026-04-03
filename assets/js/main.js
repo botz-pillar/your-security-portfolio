@@ -153,6 +153,9 @@ const SITE_CONFIG = {
     and either delete that section or swap in your own CTA.
     ========================================================
   */
+  // Set to false to hide all elements with [data-template-promo] across the site
+  showTemplatePromo: true,
+
   templatePromoTitle: "Build your own portfolio",
   templatePromoText:
     "Want a version like this? Join the community and use the template starter to build and deploy your own portfolio.",
@@ -417,6 +420,14 @@ document.addEventListener("DOMContentLoaded", () => {
       el.setAttribute("content", SITE_CONFIG[key]);
     }
   });
+
+  // Dynamic document title from config
+  document.title = `${SITE_CONFIG.siteName} | ${SITE_CONFIG.siteTitleShort}`;
+
+  // Hide template promo sections if disabled
+  if (!SITE_CONFIG.showTemplatePromo) {
+    hideElements("[data-template-promo]");
+  }
 
   console.log("Template site config loaded.");
 });
