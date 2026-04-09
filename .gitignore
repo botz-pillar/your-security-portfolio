@@ -5,6 +5,10 @@ site/.terraform/
 site/terraform.tfstate
 site/terraform.tfstate.*
 
+# Terraform variables (may contain real bucket names, regions, etc.)
+*.tfvars
+!*.tfvars.example
+
 # Terraform crash / override files
 crash.log
 override.tf
@@ -12,5 +16,19 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 
+# Environment variables and secrets
+.env
+.env.*
+
+# Private keys
+*.pem
+*.key
+
+# Dependencies
+node_modules/
+
 # Optional: ignore local editor/system clutter
 .vscode/
+
+# Claude Code
+CLAUDE.md

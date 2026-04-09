@@ -1,42 +1,49 @@
 <!--
   ============================================================
-  PROJECT TEMPLATE
+  PROJECT TEMPLATE — Step-by-Step Guide
   ============================================================
 
-  HOW TO USE THIS TEMPLATE:
+  QUICK START:
 
-  1. Copy this file and rename it for your project.
-     Example: cp project-template.html aws-hardening-lab.html
+  1. Copy this file and rename it:
+     cp projects/project-template.html projects/your-project-name.html
 
-  2. Replace ALL placeholder text (marked with [BRACKETS]).
-     Search for "[" to find them quickly.
+  2. Replace ALL [BRACKETED] placeholder text below.
+     Tip: search for "[" to find them all quickly.
 
-  3. Update the content sections with your own project details.
-     You can add, remove, or reorder sections as needed.
+  3. Fill in each content section with your project details:
+     - Project Overview (what it is)
+     - Problem It Solves (why it matters)
+     - Architecture Overview (how it works)
+     - Implementation Notes (key decisions)
+     - What This Demonstrates (skills proven)
+     - What I Learned (growth and reflection)
 
-  4. Add a link to your new project from projects.html.
-     Copy one of the existing project cards and update it.
+  4. Update the sidebar metadata:
+     - Project Snapshot (type, status, outcome)
+     - Core Technologies (tags)
+     - What Reviewers Can See (skills)
 
-  5. Preview locally, then deploy.
+  5. Link your project from projects.html — copy this card HTML
+     and paste it into the projects-grid section:
 
-  WHAT IS ALREADY WIRED TO main.js:
-  - data-site-name, data-site-role-title, data-site-full-name
-  - data-site-resume, data-site-resume-label
-  - data-site-headshot, data-site-favicon
-  - data-site-footer, data-site-skool, data-site-template-repo
-  - data-template-promo-title, data-template-promo-text
-  - data-template-promo-community-label, data-template-promo-github-label
-  - data-cta-browse-projects
+     <article class="project-card project-card-live">
+       <div class="project-card-top">
+         <span class="project-card-label">New</span>
+         <span class="status-badge status-live">Live</span>
+       </div>
+       <h3>Your Project Title</h3>
+       <p>One-sentence description of the project.</p>
+       <div class="project-card-meta">
+         <span>Tech 1</span>
+         <span>Tech 2</span>
+         <span>Tech 3</span>
+       </div>
+       <a class="text-link" href="projects/your-project-name.html">View project</a>
+     </article>
 
-  WHAT YOU REPLACE DIRECTLY IN THIS FILE:
-  - Project title, description, and all content sections
-  - Sidebar metadata (stack, type, outcomes)
-  - Implementation notes and bullet points
-  - The <title> tag text
+  6. Preview locally, then deploy with: bash scripts/deploy-site.sh
 
-  OPTIONAL: You can also add new keys to SITE_CONFIG in main.js
-  and wire them up with data-* attributes if you want to centralize
-  content for a project you reference in multiple places.
   ============================================================
 -->
 <!DOCTYPE html>
@@ -51,10 +58,23 @@
     content="[A one-sentence description of this project for search engines and social sharing.]"
   />
 
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" data-og="ogTitle" />
+  <meta property="og:description" content="" data-og="ogDescription" />
+  <meta property="og:image" content="" data-og="ogImage" />
+  <meta property="og:site_name" content="" data-og="ogSiteName" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="" data-og="ogTitle" />
+  <meta name="twitter:description" content="" data-og="ogDescription" />
+  <meta name="twitter:image" content="" data-og="ogImage" />
+
   <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body data-page-id="project-detail">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="logo" aria-label="Go to homepage">
@@ -71,15 +91,15 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="project-hero">
       <div class="container project-hero-grid">
         <div class="project-hero-copy">
-          <div class="eyebrow">[PROJECT CATEGORY] • [PROJECT THEME]</div>
+          <div class="eyebrow">[PROJECT CATEGORY] &bull; [PROJECT THEME]</div>
           <h1 class="project-title">[PROJECT TITLE]</h1>
 
           <p class="project-lead">
-            [A 1-2 sentence summary of the project. What is it, what does it do, and why does it matter? This is the first thing a visitor reads.]
+            [A 1-2 sentence summary. What is it, what does it do, and why does it matter?]
           </p>
 
           <div class="project-hero-actions">
@@ -100,7 +120,7 @@
           </div>
         </div>
 
-        <aside class="project-hero-card" aria-label="Project architecture summary">
+        <aside class="project-hero-card hero-card-decorative" aria-label="Project architecture summary">
           <div class="manifest-window">
             <div class="manifest-top">
               <span class="dot"></span>
@@ -142,14 +162,14 @@ outcomes:
           <section class="project-section">
             <h2>Problem It Solves</h2>
             <p>
-              [Explain the problem or gap this project addresses. Why does this matter to someone evaluating your skills? Think about your audience: hiring managers, recruiters, technical peers.]
+              [Explain the problem or gap this project addresses. Why does this matter? Think about your audience: employers, peers, anyone reviewing your work.]
             </p>
           </section>
 
           <section class="project-section">
             <h2>Architecture Overview</h2>
             <p>
-              [Describe the high-level architecture. What services, tools, or technologies are involved? How do they connect? Keep it clear enough for a non-expert to follow.]
+              [Describe the high-level architecture. What services, tools, or technologies are involved? How do they connect?]
             </p>
 
             <div class="project-placeholder">
@@ -171,14 +191,14 @@ outcomes:
           <section class="project-section">
             <h2>What This Demonstrates</h2>
             <p>
-              [Explain what skills this project proves. Connect it to the kind of role you are targeting. What should a reviewer take away from seeing this work?]
+              [Explain what skills this project proves. What should a reviewer take away from seeing this work?]
             </p>
           </section>
 
           <section class="project-section">
             <h2>What I Learned</h2>
             <p>
-              [Be honest about what you learned. This is a strength, not a weakness. Hiring managers value self-awareness and growth. What would you do differently next time?]
+              [Be honest about what you learned. This is a strength. What would you do differently next time?]
             </p>
           </section>
         </div>
@@ -195,7 +215,7 @@ outcomes:
 
               <div class="project-sidebar-item">
                 <span class="project-sidebar-label">Best For</span>
-                <strong>[e.g., Showing AWS hardening skills, Demonstrating detection logic]</strong>
+                <strong>[e.g., Showing AWS hardening skills]</strong>
               </div>
 
               <div class="project-sidebar-item">
@@ -280,7 +300,7 @@ outcomes:
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div data-site-footer>© 2026 [YOUR_SITE_NAME]</div>
+      <div data-site-footer>&copy; 2026 [YOUR_SITE_NAME]</div>
 
       <div class="footer-links">
         <a href="../index.html">Home</a>
@@ -291,6 +311,8 @@ outcomes:
     </div>
   </footer>
 
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/content.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>

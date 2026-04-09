@@ -4,17 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Security Portfolio Platform in AWS | [YOUR_SITE_NAME] | Cloud Security Portfolio</title>
+  <title>Security Portfolio Platform in AWS | [YOUR_SITE_NAME]</title>
   <meta
     name="description"
     content="A cloud security project page covering AWS hosting, Terraform-managed infrastructure, and the technical decisions behind a live portfolio platform."
     data-meta-description="projectMetaDescription"
   />
 
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" data-og="ogTitle" />
+  <meta property="og:description" content="" data-og="ogDescription" />
+  <meta property="og:image" content="" data-og="ogImage" />
+  <meta property="og:site_name" content="" data-og="ogSiteName" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="" data-og="ogTitle" />
+  <meta name="twitter:description" content="" data-og="ogDescription" />
+  <meta name="twitter:image" content="" data-og="ogImage" />
+
   <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body data-page-id="project-detail">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="logo" aria-label="Go to homepage">
@@ -31,7 +44,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="project-hero">
       <div class="container project-hero-grid">
         <div class="project-hero-copy">
@@ -140,11 +153,13 @@ outcomes:
               The platform uses a static front end for speed, simplicity, and low operational overhead. Site files are stored in Amazon S3 and delivered through CloudFront, while Terraform manages the infrastructure configuration. This keeps the implementation approachable while still reflecting real cloud deployment decisions and a more disciplined infrastructure workflow.
             </p>
 
-            <!-- Hidden by default — uncomment when you have an architecture diagram or screenshot
-            <div class="project-placeholder">
-              <p data-project-portfolio-arch-placeholder>[Add architecture diagram, deploy screenshot, or AWS console image here later]</p>
+            <div class="project-diagram">
+              <img
+                src="../assets/img/architecture-diagram.svg"
+                alt="Architecture diagram showing the portfolio deploy flow: Developer edits config.js and pushes to GitHub, Terraform creates S3 bucket and CloudFront distribution, deploy script syncs files to S3 and invalidates CloudFront cache, visitors access the site via HTTPS through CloudFront with security headers."
+                class="architecture-diagram"
+              />
             </div>
-            -->
           </section>
 
           <section class="project-section">
@@ -273,7 +288,7 @@ outcomes:
             <a
               class="button button-secondary"
               data-site-template-repo
-              href="[YOUR_TEMPLATE_REPO_URL]"
+              href="https://github.com/botz-pillar/your-security-portfolio"
               target="_blank"
               rel="noopener noreferrer"
               data-template-promo-github-label
@@ -299,6 +314,8 @@ outcomes:
     </div>
   </footer>
 
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/content.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>

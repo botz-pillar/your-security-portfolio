@@ -7,15 +7,27 @@
   <title>Contact | [YOUR_SITE_NAME] | Cloud Security Portfolio</title>
   <meta
     name="description"
-    content="Use this page to connect directly, review the resume, and explore the cloud security work featured throughout the portfolio."
+    content="Connect directly, review the resume, and explore the cloud security projects featured in this portfolio."
     data-meta-description="contactMetaDescription"
   />
 
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" data-og="ogTitle" />
+  <meta property="og:description" content="" data-og="ogDescription" />
+  <meta property="og:image" content="" data-og="ogImage" />
+  <meta property="og:site_name" content="" data-og="ogSiteName" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="" data-og="ogTitle" />
+  <meta name="twitter:description" content="" data-og="ogDescription" />
+  <meta name="twitter:image" content="" data-og="ogImage" />
+
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/advisor.css" />
 </head>
 <body data-page-id="contact">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo" aria-label="Go to homepage">
@@ -32,17 +44,17 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="contact-hero">
       <div class="container contact-hero-grid">
         <div class="contact-hero-copy">
-          <div class="eyebrow" data-site-tagline-short>Cloud Security • AWS • Secure Architecture</div>
+          <div class="eyebrow" data-site-tagline-short>Cloud Security &bull; AWS &bull; AI + Automation</div>
           <h1 class="contact-title" data-contact-hero-title>
-            The best way to understand my work is to review it directly.
+            Get in touch.
           </h1>
 
           <p class="contact-lead" data-contact-hero-subtitle>
-            This page makes it easy to connect, review my background, and explore the work that best reflects my cloud security experience.
+            Review my projects or reach out directly — I'm always open to connecting with people working in cloud security.
           </p>
 
           <div class="hero-actions">
@@ -67,27 +79,6 @@
             </a>
           </div>
         </div>
-
-        <aside class="contact-summary-card">
-          <h2>Best Ways to Connect</h2>
-
-          <div class="contact-summary-list">
-            <div class="contact-summary-item">
-              <span class="meta-label">Resume</span>
-              <span data-contact-sidebar-resume-desc>Review my background, certifications, and experience in a format built for hiring managers and recruiters.</span>
-            </div>
-
-            <div class="contact-summary-item">
-              <span class="meta-label">Projects</span>
-              <span data-contact-sidebar-projects-desc>Explore the projects and technical writeups that show how I approach implementation, architecture, and cloud security work.</span>
-            </div>
-
-            <div class="contact-summary-item">
-              <span class="meta-label">Direct Contact</span>
-              <span data-contact-sidebar-direct-desc>Reach out by email or LinkedIn if you want to discuss the work, ask questions, or start a professional conversation.</span>
-            </div>
-          </div>
-        </aside>
       </div>
     </section>
 
@@ -96,7 +87,7 @@
         <div class="section-header">
           <h2>Ways to Connect</h2>
           <p data-contact-ways-to-connect-desc>
-            Choose the option that helps you evaluate the work, review my background, or reach out directly.
+            Choose the option that works best for you.
           </p>
         </div>
 
@@ -108,7 +99,7 @@
 
             <h3>View Resume</h3>
             <p data-contact-resume-card-desc>
-              Start here if you want a quick overview of my experience, certifications, and professional background.
+              A quick overview of my background, skills, and where I'm headed in cloud security.
             </p>
 
             <div class="contact-card-actions">
@@ -132,7 +123,7 @@
 
             <h3>Project Collection</h3>
             <p data-contact-projects-card-desc>
-              Review the technical work directly, including AWS projects, implementation notes, and hands-on security-focused builds.
+              The technical work directly — AWS projects, implementation notes, and hands-on builds.
             </p>
 
             <div class="contact-card-actions">
@@ -149,7 +140,7 @@
 
             <h3>Email</h3>
             <p data-contact-email-card-desc>
-              Reach out directly for professional inquiries, collaboration, or questions related to the work featured throughout the portfolio.
+              Reach out for professional inquiries, collaboration, or questions about my projects.
             </p>
 
             <div class="contact-card-actions">
@@ -164,6 +155,30 @@
             </div>
           </article>
 
+          <article class="contact-card" data-site-scheduling>
+            <div class="contact-card-top">
+              <span class="project-tag">Schedule</span>
+            </div>
+
+            <h3>Book a Call</h3>
+            <p data-contact-scheduling-card-desc>
+              Skip the back-and-forth — pick a time that works and let's talk.
+            </p>
+
+            <div class="contact-card-actions">
+              <a
+                class="button button-secondary"
+                data-site-scheduling
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                data-site-scheduling-label
+              >
+                Book a Call
+              </a>
+            </div>
+          </article>
+
           <article class="contact-card" data-site-linkedin>
             <div class="contact-card-top">
               <span class="project-tag">Professional</span>
@@ -171,7 +186,7 @@
 
             <h3>LinkedIn</h3>
             <p data-contact-linkedin-card-desc>
-              Use LinkedIn to follow the work, connect professionally, and stay current on future projects and technical updates.
+              Connect professionally and stay current on future projects and updates.
             </p>
 
             <div class="contact-card-actions">
@@ -195,7 +210,7 @@
 
             <h3>GitHub</h3>
             <p data-contact-github-card-desc>
-              Explore repositories, starter files, and supporting code that help show how the work is structured and maintained.
+              Explore repositories, project code, and supporting files.
             </p>
 
             <div class="contact-card-actions">
@@ -215,9 +230,13 @@
       </div>
     </section>
 
-    <section class="section advisor-section" id="advisor">
+    <section class="section faq-section" id="faq" aria-label="Frequently asked questions">
       <div class="container">
-        <div class="advisor-container" id="advisor-app"></div>
+        <div class="section-header">
+          <h2>Common Questions</h2>
+          <p>Quick answers about my work, background, and what I'm building.</p>
+        </div>
+        <div class="faq-list" id="faq-list" role="list"></div>
       </div>
     </section>
 
@@ -227,7 +246,7 @@
           <h2 data-template-promo-title>Build your own portfolio</h2>
 
           <p data-template-promo-text>
-            Want a version like this? Join the community and use the template starter to build and deploy your own portfolio.
+            Want a version like this? Join the AI Cloud Security Lab community and use this template to build, deploy, and launch your own portfolio.
           </p>
 
           <div class="cta-actions">
@@ -239,13 +258,13 @@
               rel="noopener noreferrer"
               data-template-promo-community-label
             >
-              Learn in the Community
+              Join the AI Cloud Security Lab
             </a>
 
             <a
               class="button button-secondary"
               data-site-template-repo
-              href="[YOUR_TEMPLATE_REPO_URL]"
+              href="https://github.com/botz-pillar/your-security-portfolio"
               target="_blank"
               rel="noopener noreferrer"
               data-template-promo-github-label
@@ -260,7 +279,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div data-site-footer>© 2026 [YOUR_SITE_NAME]</div>
+      <div data-site-footer>&copy; 2026 [YOUR_SITE_NAME]</div>
 
       <div class="footer-links">
         <a href="index.html">Home</a>
@@ -271,7 +290,8 @@
     </div>
   </footer>
 
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/content.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/advisor.js"></script>
 </body>
 </html>

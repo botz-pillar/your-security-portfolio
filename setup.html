@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup Checklist</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: #080b12;
+      color: #f4f4f7;
+      padding: 2rem;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 0.3rem; }
+    .subtitle { color: #b8bfd0; font-size: 0.92rem; margin-bottom: 2rem; }
+    .group { margin-bottom: 1.5rem; }
+    .group-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: #b8bfd0; margin-bottom: 0.5rem; }
+    .item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid rgba(227,227,227,0.12);
+      border-radius: 10px;
+      margin-bottom: 0.4rem;
+      font-size: 0.92rem;
+    }
+    .item .icon { font-size: 1.1rem; flex-shrink: 0; width: 1.4rem; text-align: center; }
+    .item.pass { border-color: rgba(7,228,233,0.3); }
+    .item.pass .icon { color: #07e4e9; }
+    .item.fail { border-color: rgba(142,72,248,0.4); }
+    .item.fail .icon { color: #8e48f8; }
+    .item .label { flex: 1; }
+    .item .value { color: #b8bfd0; font-size: 0.82rem; max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .note {
+      margin-top: 2rem; padding: 1rem;
+      border: 1px dashed rgba(227,227,227,0.2);
+      border-radius: 10px; color: #b8bfd0; font-size: 0.85rem;
+    }
+    .note strong { color: #f4f4f7; }
+  </style>
+</head>
+<body>
+  <h1>Setup Checklist</h1>
+  <p class="subtitle">Open this page locally to check your config. Delete it before deploying (or leave it — the deploy script excludes it).</p>
+  <div id="checklist"></div>
+  <div class="note">
+    <strong>Next steps:</strong> Once everything is green, open <code>index.html</code> to preview your portfolio, then run <code>bash scripts/deploy-site.sh</code> to deploy.
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script>
+    var c = typeof SITE_CONFIG !== "undefined" ? SITE_CONFIG : {};
+    var el = document.getElementById("checklist");
+
+    function isPlaceholder(v) {
+      return !v || (typeof v === "string" && v.includes("[YOUR_"));
+    }
+
+    function group(title, items) {
+      var g = document.createElement("div");
+      g.className = "group";
+      var t = document.createElement("div");
+      t.className = "group-title";
+      t.textContent = title;
+      g.appendChild(t);
+      items.forEach(function (item) {
+        var row = document.createElement("div");
+        var ok = item.check();
+        row.className = "item " + (ok ? "pass" : "fail");
+        row.innerHTML =
+          '<span class="icon">' + (ok ? "\u2713" : "\u2717") + "</span>" +
+          '<span class="label">' + item.label + "</span>" +
+          '<span class="value">' + (item.display || "") + "</span>";
+        g.appendChild(row);
+      });
+      el.appendChild(g);
+    }
+
+    group("Required Fields", [
+      { label: "First Name", display: c.siteFirstName, check: function () { return !isPlaceholder(c.siteFirstName); } },
+      { label: "Last Name", display: c.siteLastName, check: function () { return !isPlaceholder(c.siteLastName); } },
+      { label: "Role Title", display: c.roleTitle, check: function () { return !isPlaceholder(c.roleTitle); } },
+      { label: "Email", display: c.email, check: function () { return !isPlaceholder(c.email); } },
+      { label: "Resume URL", display: c.resumeUrl, check: function () { return !isPlaceholder(c.resumeUrl); } }
+    ]);
+
+    group("Optional Links", [
+      { label: "LinkedIn", display: c.linkedinUrl || "not set", check: function () { return !!c.linkedinUrl; } },
+      { label: "GitHub", display: c.githubUrl || "not set", check: function () { return !!c.githubUrl; } },
+      { label: "Scheduling Link", display: c.schedulingUrl || "not set", check: function () { return !!c.schedulingUrl; } },
+      { label: "Site URL (for social sharing)", display: c.siteUrl || "not set", check: function () { return !!c.siteUrl; } }
+    ]);
+
+    group("Content", [
+      { label: "FAQ items", display: (c.faq || []).length + " questions", check: function () { return c.faq && c.faq.length > 0; } },
+      { label: "Currently Building items", display: (c.currentlyBuilding || []).length + " items", check: function () { return c.currentlyBuilding && c.currentlyBuilding.length > 0; } },
+      { label: "Skills", display: (c.skills || []).length + " skills", check: function () { return c.skills && c.skills.length > 0; } },
+      { label: "Last Updated", display: c.lastUpdated || "not set", check: function () { return !!c.lastUpdated; } }
+    ]);
+  </script>
+</body>
+</html>

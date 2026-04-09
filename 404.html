@@ -11,10 +11,23 @@
     data-meta-description="errorMetaDescription"
   />
 
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" data-og="ogTitle" />
+  <meta property="og:description" content="" data-og="ogDescription" />
+  <meta property="og:image" content="" data-og="ogImage" />
+  <meta property="og:site_name" content="" data-og="ogSiteName" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="" data-og="ogTitle" />
+  <meta name="twitter:description" content="" data-og="ogDescription" />
+  <meta name="twitter:image" content="" data-og="ogImage" />
+
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body data-page-id="error">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo" aria-label="Go to homepage">
@@ -31,7 +44,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="error-page">
       <div class="container error-page-inner">
         <div class="eyebrow">404</div>
@@ -72,6 +85,8 @@
     </div>
   </footer>
 
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/content.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

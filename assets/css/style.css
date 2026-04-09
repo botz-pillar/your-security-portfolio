@@ -956,6 +956,19 @@ img {
   color: var(--muted);
 }
 
+.project-diagram {
+  margin-top: 1.2rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.architecture-diagram {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .project-sidebar {
   display: flex;
   flex-direction: column;
@@ -1523,5 +1536,352 @@ img {
   .hero-profile-photo-wrap {
     width: 96px;
     height: 96px;
+  }
+}
+
+
+/* ==========================================================
+   V2: CURRENTLY BUILDING
+========================================================== */
+
+.currently-building-list {
+  max-width: 820px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.currently-building-item {
+  padding: 1rem 1.25rem 1rem 2.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.currently-building-item::before {
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: 0 0 8px rgba(7, 228, 233, 0.5);
+}
+
+
+/* ==========================================================
+   V2: FAQ ACCORDION
+========================================================== */
+
+.faq-section {
+  padding: 4rem 0;
+}
+
+.faq-list {
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.2rem 1.4rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  min-height: 48px;
+  color: var(--text);
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.faq-item[open] .faq-question::after {
+  content: "\2212";
+}
+
+.faq-answer {
+  padding: 0 1.4rem 1.2rem;
+  color: var(--muted);
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 700px) {
+  .faq-question {
+    padding: 1rem 1.1rem;
+    font-size: 0.97rem;
+  }
+
+  .faq-answer {
+    padding: 0 1.1rem 1rem;
+    font-size: 0.92rem;
+  }
+}
+
+
+/* ==========================================================
+   V2: COMMUNITY BADGE (footer)
+========================================================== */
+
+.community-badge {
+  width: 100%;
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+}
+
+.community-badge a {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.community-badge a:hover {
+  opacity: 1;
+  color: var(--accent-2);
+}
+
+
+/* ==========================================================
+   V2: SKIP LINK (accessibility)
+========================================================== */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+
+/* ==========================================================
+   V2: MOBILE — hide decorative elements on small screens
+========================================================== */
+
+@media (max-width: 700px) {
+  .hero-card-decorative .terminal,
+  .hero-card-decorative .manifest-window {
+    display: none;
+  }
+}
+
+
+/* ==========================================================
+   V2: SKILLS & CERTIFICATIONS (About sidebar)
+========================================================== */
+
+.about-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.about-skills-list span {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+}
+
+
+/* ==========================================================
+   V2: LAST UPDATED (footer)
+========================================================== */
+
+.footer-updated {
+  width: 100%;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.78rem;
+  opacity: 0.6;
+  padding-top: 0.5rem;
+}
+
+
+/* ==========================================================
+   V2: PRINT STYLESHEET
+========================================================== */
+
+@media print {
+  * {
+    background: #fff !important;
+    color: #111 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .hero-card,
+  .hero-card-stack,
+  .hero-card-decorative,
+  .project-manifest-card,
+  .hero-actions,
+  .feature-actions,
+  .project-hero-actions,
+  .about-sidebar-actions,
+  .cta-panel,
+  .cta-actions,
+  .contact-card-actions,
+  [data-template-promo],
+  .community-badge,
+  .footer-updated,
+  .faq-section,
+  .currently-building-section {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero,
+  .page-hero,
+  .about-hero,
+  .contact-hero,
+  .project-hero {
+    padding: 0.5rem 0;
+  }
+
+  .section {
+    padding: 1rem 0;
+  }
+
+  h1 {
+    font-size: 20pt;
+    margin-bottom: 0.3rem;
+  }
+
+  h2 {
+    font-size: 14pt;
+    margin-bottom: 0.3rem;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 12pt;
+  }
+
+  .hero-grid,
+  .page-hero-grid,
+  .about-hero-grid,
+  .about-hero-grid-enhanced,
+  .contact-hero-grid,
+  .project-hero-grid,
+  .about-content-grid,
+  .about-content-grid-simplified,
+  .project-content-grid {
+    display: block;
+  }
+
+  .about-feature-card,
+  .contact-summary-card {
+    display: none;
+  }
+
+  .card,
+  .project-section,
+  .about-section,
+  .about-sidebar-card,
+  .project-sidebar-card,
+  .contact-card,
+  .feature-card {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript"]::after,
+  nav a::after {
+    content: "";
+  }
+
+  .grid-3,
+  .projects-grid,
+  .contact-grid {
+    display: block;
+  }
+
+  .grid-3 > *,
+  .projects-grid > *,
+  .contact-grid > * {
+    margin-bottom: 0.5rem;
+  }
+
+  .info-strip {
+    border: none;
+  }
+
+  .info-panel {
+    display: block;
   }
 }

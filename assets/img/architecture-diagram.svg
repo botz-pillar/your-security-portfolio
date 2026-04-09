@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600" width="880" height="600">
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0,0 10,3.5 0,7" fill="#333"/>
+    </marker>
+    <marker id="ah-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0,0 10,3.5 0,7" fill="#1a73e8"/>
+    </marker>
+    <marker id="ah-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0,0 10,3.5 0,7" fill="#e8710a"/>
+    </marker>
+    <marker id="ah-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0,0 10,3.5 0,7" fill="#999"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect width="880" height="600" fill="#fff" rx="4"/>
+
+  <!-- Title -->
+  <text x="440" y="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#232f3e">Security Portfolio Platform — AWS Architecture</text>
+
+  <!-- =============================================================
+       AWS CLOUD BOUNDARY
+       ============================================================= -->
+  <rect x="230" y="48" width="636" height="538" rx="6" fill="#f5f8ff" stroke="#1a73e8" stroke-width="2"/>
+  <rect x="232" y="48" width="115" height="22" rx="4" fill="#1a73e8"/>
+  <text x="289" y="63" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#fff">AWS Cloud</text>
+
+  <!-- =============================================================
+       USERS / INTERNET (top left, outside AWS)
+       ============================================================= -->
+  <rect x="16" y="88" width="190" height="80" rx="6" fill="#fff" stroke="#5f6368" stroke-width="1.5"/>
+  <text x="111" y="118" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#333">Visitors</text>
+  <text x="111" y="135" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#666">Browser (HTTPS)</text>
+  <text x="111" y="150" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#999">Employers / Peers / Recruiters</text>
+
+  <!-- Arrow: Users -> CloudFront -->
+  <line x1="206" y1="128" x2="288" y2="128" stroke="#1a73e8" stroke-width="2" marker-end="url(#ah-blue)"/>
+  <text x="248" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#1a73e8">HTTPS</text>
+
+  <!-- =============================================================
+       OPTIONAL: ROUTE 53 + ACM (top of AWS box)
+       ============================================================= -->
+  <rect x="550" y="78" width="135" height="55" rx="5" fill="#fff" stroke="#999" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="617" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#999">Route 53</text>
+  <text x="617" y="115" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#aaa">DNS (optional)</text>
+
+  <rect x="710" y="78" width="135" height="55" rx="5" fill="#fff" stroke="#999" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="777" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#999">ACM</text>
+  <text x="777" y="115" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#aaa">TLS cert (optional)</text>
+
+  <!-- =============================================================
+       CLOUDFRONT (main service box)
+       ============================================================= -->
+  <rect x="300" y="80" width="224" height="155" rx="6" fill="#fff" stroke="#e8710a" stroke-width="2"/>
+  <rect x="302" y="80" width="175" height="22" rx="4" fill="#e8710a"/>
+  <text x="389" y="95" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#fff">Amazon CloudFront</text>
+
+  <text x="316" y="120" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333">Global CDN distribution</text>
+
+  <line x1="310" y1="128" x2="514" y2="128" stroke="#ddd" stroke-width="1"/>
+
+  <text x="316" y="145" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">Viewer protocol: redirect-to-https</text>
+  <text x="316" y="160" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">Min TLS: v1.2_2021</text>
+  <text x="316" y="175" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">Compression: gzip enabled</text>
+  <text x="316" y="190" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">Custom errors: 403/404 &#x2192; /404.html</text>
+  <text x="316" y="205" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">Price class: PriceClass_100</text>
+  <text x="316" y="220" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">Default root: index.html</text>
+
+  <!-- =============================================================
+       RESPONSE HEADERS POLICY
+       ============================================================= -->
+  <rect x="550" y="154" width="295" height="146" rx="6" fill="#fff" stroke="#e8710a" stroke-width="1.5"/>
+  <rect x="552" y="154" width="200" height="20" rx="4" fill="#e8710a"/>
+  <text x="652" y="168" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#fff">Response Headers Policy</text>
+
+  <text x="566" y="192" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#333" font-weight="bold">Security headers added to every response:</text>
+
+  <text x="566" y="210" font-family="Consolas, monospace" font-size="9" fill="#555">Strict-Transport-Security: max-age=31536000</text>
+  <text x="566" y="225" font-family="Consolas, monospace" font-size="9" fill="#555">X-Content-Type-Options: nosniff</text>
+  <text x="566" y="240" font-family="Consolas, monospace" font-size="9" fill="#555">X-Frame-Options: DENY</text>
+  <text x="566" y="255" font-family="Consolas, monospace" font-size="9" fill="#555">Referrer-Policy: strict-origin-when-cross-origin</text>
+  <text x="566" y="270" font-family="Consolas, monospace" font-size="9" fill="#555">Content-Security-Policy: default-src 'self'</text>
+  <text x="566" y="285" font-family="Consolas, monospace" font-size="9" fill="#555">  style-src 'self' 'unsafe-inline'</text>
+
+  <!-- Arrow: CloudFront -> Headers Policy -->
+  <line x1="524" y1="200" x2="547" y2="200" stroke="#e8710a" stroke-width="1.5" marker-end="url(#ah-orange)"/>
+
+  <!-- =============================================================
+       ORIGIN ACCESS CONTROL
+       ============================================================= -->
+  <rect x="362" y="260" width="100" height="30" rx="4" fill="#fff3e0" stroke="#e8710a" stroke-width="1"/>
+  <text x="412" y="280" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#e8710a">OAC</text>
+
+  <!-- Arrow: CloudFront -> OAC -->
+  <line x1="412" y1="235" x2="412" y2="258" stroke="#e8710a" stroke-width="1.5" marker-end="url(#ah-orange)"/>
+
+  <!-- Arrow: OAC -> S3 -->
+  <line x1="412" y1="290" x2="412" y2="320" stroke="#e8710a" stroke-width="1.5" marker-end="url(#ah-orange)"/>
+  <text x="435" y="310" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#e8710a">SigV4 signed</text>
+
+  <!-- =============================================================
+       S3 BUCKET
+       ============================================================= -->
+  <rect x="270" y="322" width="296" height="250" rx="6" fill="#fff" stroke="#3b7d23" stroke-width="2"/>
+  <rect x="272" y="322" width="145" height="22" rx="4" fill="#3b7d23"/>
+  <text x="344" y="337" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#fff">Amazon S3</text>
+
+  <text x="286" y="362" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333" font-weight="bold">Private static site bucket</text>
+
+  <line x1="280" y1="370" x2="556" y2="370" stroke="#ddd" stroke-width="1"/>
+
+  <text x="286" y="390" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333">Security Configuration</text>
+  <text x="286" y="408" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">&#x2022; Block all public access (BPA enabled)</text>
+  <text x="286" y="423" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">&#x2022; AES-256 server-side encryption</text>
+  <text x="286" y="438" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">&#x2022; Versioning enabled</text>
+  <text x="286" y="453" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">&#x2022; Object ownership: BucketOwnerEnforced</text>
+  <text x="286" y="468" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">&#x2022; Bucket policy: allow only CloudFront</text>
+  <text x="296" y="483" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#888">  (condition: AWS:SourceArn = distribution ARN)</text>
+
+  <line x1="280" y1="492" x2="556" y2="492" stroke="#ddd" stroke-width="1"/>
+
+  <text x="286" y="510" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333">Contents (synced from project)</text>
+  <text x="286" y="528" font-family="Consolas, monospace" font-size="9" fill="#555">*.html, assets/css/*, assets/js/*,</text>
+  <text x="286" y="543" font-family="Consolas, monospace" font-size="9" fill="#555">assets/img/*, projects/*</text>
+  <text x="286" y="558" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#888">Excludes: site/, scripts/, docs/, .github/</text>
+
+  <!-- =============================================================
+       MANAGEMENT / DEPLOY SIDE (left column)
+       ============================================================= -->
+  <rect x="16" y="210" width="190" height="376" rx="6" fill="#f9f9f9" stroke="#bbb" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="111" y="232" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#666">MANAGEMENT / DEPLOY</text>
+
+  <!-- Terraform -->
+  <rect x="30" y="250" width="162" height="65" rx="5" fill="#fff" stroke="#7b42f5" stroke-width="1.5"/>
+  <text x="111" y="273" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#7b42f5">Terraform</text>
+  <text x="111" y="290" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">Provisions S3, CloudFront,</text>
+  <text x="111" y="303" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">OAC, headers policy</text>
+
+  <!-- GitHub -->
+  <rect x="30" y="340" width="162" height="55" rx="5" fill="#fff" stroke="#5f6368" stroke-width="1.5"/>
+  <text x="111" y="363" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#333">GitHub</text>
+  <text x="111" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">Source repo + optional CI/CD</text>
+
+  <!-- Deploy script -->
+  <rect x="30" y="420" width="162" height="65" rx="5" fill="#fff" stroke="#5f6368" stroke-width="1.5"/>
+  <text x="111" y="445" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#333">deploy-site.sh</text>
+  <text x="111" y="462" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">1. Validates config</text>
+  <text x="111" y="475" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">2. aws s3 sync</text>
+
+  <!-- Config.js -->
+  <rect x="30" y="510" width="162" height="55" rx="5" fill="#fff" stroke="#5f6368" stroke-width="1.5"/>
+  <text x="111" y="533" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#333">config.js</text>
+  <text x="111" y="550" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#666">5 required fields to deploy</text>
+
+  <!-- Arrows: management side -->
+  <line x1="111" y1="168" x2="111" y2="210" stroke="#666" stroke-width="1" marker-end="url(#ah)"/>
+  <text x="124" y="195" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#666">edits &amp; runs</text>
+
+  <!-- Terraform -> AWS (provisions) -->
+  <line x1="192" y1="280" x2="268" y2="350" stroke="#7b42f5" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ah)"/>
+  <text x="215" y="300" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#7b42f5">provisions</text>
+
+  <!-- Deploy -> S3 (sync) -->
+  <line x1="192" y1="455" x2="268" y2="455" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
+  <text x="230" y="448" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#333">s3 sync</text>
+
+  <!-- Deploy -> CloudFront (invalidate) -->
+  <line x1="192" y1="435" x2="298" y2="220" stroke="#999" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#ah-gray)"/>
+  <text x="252" y="340" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#999" transform="rotate(-60, 252, 340)">cache invalidation</text>
+
+  <!-- =============================================================
+       DATA FLOW LEGEND
+       ============================================================= -->
+  <rect x="600" y="322" width="250" height="130" rx="5" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  <text x="616" y="342" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#333">Data Flow</text>
+
+  <line x1="616" y1="360" x2="656" y2="360" stroke="#1a73e8" stroke-width="2"/>
+  <text x="666" y="364" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#555">Visitor request (HTTPS)</text>
+
+  <line x1="616" y1="382" x2="656" y2="382" stroke="#e8710a" stroke-width="2"/>
+  <text x="666" y="386" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#555">AWS service connection</text>
+
+  <line x1="616" y1="404" x2="656" y2="404" stroke="#333" stroke-width="1.5"/>
+  <text x="666" y="408" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#555">Deploy / sync</text>
+
+  <line x1="616" y1="426" x2="656" y2="426" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="666" y="430" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#555">Infrastructure provisioning</text>
+
+  <rect x="616" y="439" width="40" height="14" rx="3" fill="#fff" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="666" y="450" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#555">Optional component</text>
+
+</svg>

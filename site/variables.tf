@@ -25,3 +25,15 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "domain_name" {
+  description = "Custom domain name (e.g., portfolio.example.com). Leave empty to skip."
+  type        = string
+  default     = ""
+}
+
+variable "hosted_zone_id" {
+  description = "Route 53 hosted zone ID for the domain. Required if domain_name is set."
+  type        = string
+  default     = ""
+}
