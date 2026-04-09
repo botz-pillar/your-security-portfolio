@@ -54,7 +54,7 @@ It helps them learn:
 The template includes Terraform configuration for a custom domain:
 - Route 53 for DNS
 - ACM for TLS certificate
-- Set `domain_name` and `hosted_zone_id` in `terraform.tfvars` to enable
+- Copy `terraform.tfvars.example` to `terraform.tfvars` and set `domain_name` and `hosted_zone_id` to enable
 
 ## Future Improvements
 

@@ -67,7 +67,7 @@ terraform plan
 
 S3 bucket names must be globally unique.
 
-Update `bucket_name` in `site/terraform.tfvars`, then run:
+Update `bucket_name` in your local `site/terraform.tfvars` (copied from `terraform.tfvars.example`), then run:
 
 ```bash
 terraform plan

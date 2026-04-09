@@ -165,6 +165,17 @@ Check:
 - editing content in S3 instead of updating local files first
 - forgetting to set `siteUrl` after first deploy (social sharing won't show images)
 
+## Security Reminders
+
+If your repo is **public** on GitHub:
+
+- **Never commit API keys, tokens, or passwords** to any file — especially JavaScript files
+- **`terraform.tfvars` is `.gitignore`d** — your real bucket names and config stay local
+- **Never commit `.env` files or private keys** (`.pem`, `.key`)
+- If you accidentally commit a secret, **rotate the credential immediately** — deleting the file doesn't remove it from git history
+
+The `.gitignore` is pre-configured to block sensitive files, but always double-check before pushing.
+
 ## Best Practice
 
 Treat your local project files as the source of truth.
