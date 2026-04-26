@@ -17,3 +17,8 @@ output "cloudfront_distribution_arn" {
   description = "CloudFront distribution ARN."
   value       = aws_cloudfront_distribution.site.arn
 }
+
+output "site_url" {
+  description = "Final site URL — custom domain when configured, otherwise the CloudFront URL."
+  value       = local.use_custom_domain ? "https://${var.domain_name}" : "https://${aws_cloudfront_distribution.site.domain_name}"
+}

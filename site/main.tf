@@ -90,6 +90,11 @@ resource "aws_cloudfront_distribution" "site" {
   comment             = "${var.project_name} distribution"
   default_root_object = "index.html"
 
+  # When a custom domain is configured (see site/domain.tf), expose it as a
+  # CloudFront alias so the distribution accepts requests for it. When unset,
+  # only the default *.cloudfront.net domain serves the site.
+  aliases = local.use_custom_domain ? [var.domain_name] : []
+
   origin {
     domain_name              = aws_s3_bucket.site.bucket_regional_domain_name
     origin_id                = local.origin_id
@@ -128,10 +133,27 @@ resource "aws_cloudfront_distribution" "site" {
     }
   }
 
-  viewer_certificate {
-  cloudfront_default_certificate = true
-  minimum_protocol_version       = "TLSv1"
-}
+  # When a custom domain is configured, use the validated ACM cert from
+  # site/domain.tf. Otherwise fall back to the default *.cloudfront.net cert.
+  # The custom-domain branch requires TLSv1.2_2021 (CloudFront enforces this
+  # minimum on custom certs); the default branch keeps the looser TLSv1 to
+  # match prior behavior on the default cloudfront.net hostname.
+  dynamic "viewer_certificate" {
+    for_each = local.use_custom_domain ? [1] : []
+    content {
+      acm_certificate_arn      = aws_acm_certificate_validation.site[0].certificate_arn
+      ssl_support_method       = "sni-only"
+      minimum_protocol_version = "TLSv1.2_2021"
+    }
+  }
+
+  dynamic "viewer_certificate" {
+    for_each = local.use_custom_domain ? [] : [1]
+    content {
+      cloudfront_default_certificate = true
+      minimum_protocol_version       = "TLSv1"
+    }
+  }
 
   price_class = "PriceClass_100"
 

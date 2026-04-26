@@ -6,3 +6,26 @@ environment  = "prod"
 tags = {
   Owner = "[REPLACE-WITH-YOUR-NAME]"
 }
+
+# ----------------------------------------------------------
+# Optional: Custom Domain
+# ----------------------------------------------------------
+# Leave both empty to use the default *.cloudfront.net URL.
+#
+# To use your own domain:
+#   1. Have the domain in a Route 53 hosted zone (register fresh in
+#      Route 53, or transfer NS records from another registrar).
+#   2. Set domain_name to your domain (e.g., "alex.dev" or
+#      "portfolio.alex.dev").
+#   3. Set hosted_zone_id to the Route 53 hosted zone ID. Find it
+#      with: aws route53 list-hosted-zones-by-name --dns-name yourdomain.com
+#
+# When both are set, terraform apply will provision an ACM cert,
+# DNS validation records, and a Route 53 alias pointing to CloudFront.
+# Cert validation takes ~5-10 minutes the first time.
+#
+# Course 6 Lesson 4 (Bonus) walks through this end-to-end.
+# ----------------------------------------------------------
+
+# domain_name    = ""
+# hosted_zone_id = ""
