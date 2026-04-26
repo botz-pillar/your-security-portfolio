@@ -6,6 +6,16 @@ variable "aws_region" {
 variable "bucket_name" {
   description = "Globally unique S3 bucket name for the site."
   type        = string
+
+  validation {
+    condition     = !can(regex("\\[", var.bucket_name)) && !startswith(var.bucket_name, "REPLACE-")
+    error_message = "bucket_name still has the example placeholder. Edit terraform.tfvars and set a globally unique S3 bucket name (lowercase, 3-63 chars, no underscores or square brackets)."
+  }
+
+  validation {
+    condition     = can(regex("^[a-z0-9.-]{3,63}$", var.bucket_name))
+    error_message = "bucket_name must be 3-63 characters and contain only lowercase letters, numbers, dots, and hyphens (S3 naming rules)."
+  }
 }
 
 variable "project_name" {

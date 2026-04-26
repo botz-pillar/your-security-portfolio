@@ -33,6 +33,12 @@ data "aws_cloudfront_cache_policy" "caching_optimized" {
 resource "aws_s3_bucket" "site" {
   bucket = var.bucket_name
 
+  # force_destroy lets `terraform destroy` empty the bucket (including all
+  # object versions and delete markers) without manual cleanup. Versioning
+  # stays enabled so production-style rollback still works during normal use;
+  # this only affects teardown.
+  force_destroy = true
+
   tags = local.common_tags
 }
 
