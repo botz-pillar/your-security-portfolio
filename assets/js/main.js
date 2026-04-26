@@ -350,7 +350,20 @@ document.addEventListener("DOMContentLoaded", function () {
     "project-detail": { title: SITE_CONFIG.featuredProjectTitle + " | " + SITE_CONFIG.siteName, desc: SITE_CONFIG.projectMetaDescription }
   };
 
-  var ogData = pageMetaMap[pageId] || pageMetaMap.home;
+  var ogData;
+  if (pageId === "project-detail-static") {
+    var titleEl = document.querySelector("title");
+    var descEl = document.querySelector("meta[name='description']");
+    var staticTitle = titleEl
+      ? titleEl.textContent.replace("[YOUR_SITE_NAME]", SITE_CONFIG.siteName)
+      : "";
+    ogData = {
+      title: staticTitle,
+      desc: descEl ? descEl.getAttribute("content") : ""
+    };
+  } else {
+    ogData = pageMetaMap[pageId] || pageMetaMap.home;
+  }
   var ogSiteName = SITE_CONFIG.ogSiteName || SITE_CONFIG.siteName;
   var baseUrl = SITE_CONFIG.siteUrl ? SITE_CONFIG.siteUrl.replace(/\/$/, "") : "";
   var ogImage = SITE_CONFIG.ogImage || "assets/img/og-image.png";
@@ -401,6 +414,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.title = SITE_CONFIG.siteName + " | " + SITE_CONFIG.pageTitleSuffix;
   } else if (pageId === "project-detail") {
     document.title = SITE_CONFIG.featuredProjectTitle + " | " + SITE_CONFIG.siteName;
+  } else if (pageId === "project-detail-static") {
+    document.title = document.title.replace("[YOUR_SITE_NAME]", SITE_CONFIG.siteName);
   } else if (pageId) {
     var pageTitles = {
       projects: "Projects",
