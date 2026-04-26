@@ -55,11 +55,17 @@ const SITE_CONFIG = {
   */
   skills: [
     "AWS Security",
+    "Cloud Incident Response",
+    "Detection Engineering",
+    "Threat Hunting",
+    "SOC 2 / Trust Services Criteria",
+    "MITRE ATT&CK",
     "Terraform",
-    "CloudFront",
     "IAM",
-    "S3",
-    "GuardDuty"
+    "CloudTrail",
+    "GuardDuty",
+    "Wazuh / SIEM",
+    "AI-Augmented Workflows"
   ],
 
   certifications: [
@@ -75,9 +81,9 @@ const SITE_CONFIG = {
     ========================================================
   */
   currentlyBuilding: [
-    "Setting up AWS GuardDuty detection rules for a cloud hardening lab",
-    "Documenting architecture decisions for a multi-account security project",
-    "Studying for the AWS Security Specialty certification"
+    "Sharpening detection rules and tuning against fresh baseline data",
+    "Writing up a recent threat hunt and the assumptions it tested",
+    "Pairing with AI to compress the mechanical parts of cloud security work"
   ],
 
   /*
@@ -88,20 +94,20 @@ const SITE_CONFIG = {
   */
   faq: [
     {
-      question: "What projects have you built?",
-      answer: "I've built a cloud-hosted portfolio platform using AWS S3, CloudFront, and Terraform. I'm also working on additional projects in AWS security hardening and detection engineering. Check the projects page for the full list."
+      question: "What does \"AI-augmented\" actually mean in your work?",
+      answer: "AI does the mechanical work — clustering events, drafting first-pass language, summarizing telemetry. I do the judgment work — scoping the engagement, validating findings against source evidence, rating severity, signing the report. The decisions that matter stay with me. AI raises the ceiling on what I can ship without lowering the bar on what I should defend."
     },
     {
-      question: "What's your tech stack?",
-      answer: "HTML, CSS, and JavaScript on the front end. AWS (S3, CloudFront, IAM, GuardDuty) and Terraform for infrastructure-as-code. GitHub for version control and collaboration."
+      question: "How do you decide what's in scope on an assessment or hunt?",
+      answer: "Start from the evidence available, the question being asked, and the time window. Name what's in, name what's out, and surface the limitations on the deliverable itself — every project page here has a Limitations section for exactly this reason. Honest scoping is a senior-practitioner move, not a hedge."
     },
     {
-      question: "What are you learning right now?",
-      answer: "I'm focused on deepening my AWS security skills — building detection engineering workflows, hardening cloud environments, and preparing for the AWS Security Specialty certification."
+      question: "What's your stack?",
+      answer: "AWS for cloud — IAM, CloudTrail, GuardDuty, S3, CloudFront, Wazuh, MCP. Terraform for infrastructure-as-code. Claude Code as the AI surface. Markdown and HTML for the writing the work demands. Whatever the role's stack is, I'll learn it the same way — by shipping a project in it."
     },
     {
-      question: "How can I contact you?",
-      answer: "The best way to reach me is through email or LinkedIn. You can find all the options on the contact page, or use the links in the footer."
+      question: "How can I reach you?",
+      answer: "Email or LinkedIn — both are on the contact page. If you're hiring, share the role; if you're a peer practitioner, reach out and let's compare notes."
     }
   ],
 
@@ -117,31 +123,31 @@ const SITE_CONFIG = {
   pageTitleSuffix: "Cloud Security Portfolio",
 
   // --- Hero / Positioning ---
-  focusLine: "AWS security projects, AI-powered workflows, and cloud architecture — built by doing, not just studying.",
-  siteTagline: "Cloud Security \u2022 AWS \u2022 AI-Assisted Development \u2022 Secure Architecture",
-  siteTaglineShort: "Cloud Security \u2022 AWS \u2022 AI + Automation",
+  focusLine: "AWS cloud security work, shipped — using AI to compress hours into minutes without giving up the judgment that makes the work defensible.",
+  siteTagline: "AWS Cloud Security \u2022 AI-Augmented Practitioner \u2022 Built and Shipped",
+  siteTaglineShort: "AWS Cloud Security \u2022 AI-Augmented \u2022 Shipped",
 
-  homeHeroTitle: "Cloud security projects built through real implementation.",
-  homeHeroSubtitle: "This portfolio is where I document projects, architecture decisions, and technical work — built in AWS, managed with Terraform, and designed to be evaluated directly.",
+  homeHeroTitle: "AI-augmented cloud security work, built to be evaluated.",
+  homeHeroSubtitle: "I ship cloud security projects in AWS and use AI to move at the speed of intent — without giving up the judgment that makes the work defensible. Every project here is real. Every implementation choice is mine.",
 
-  projectsHeroTitle: "Projects and technical work.",
-  projectsHeroSubtitle: "Hands-on AWS security projects, labs, and writeups — each one built to learn something real and show how I approach implementation.",
+  projectsHeroTitle: "Projects you can read end to end.",
+  projectsHeroSubtitle: "AWS security work documented the way it would be reviewed in the role: evidence-backed, framework-aligned, and honest about what was in scope and what wasn't.",
 
-  aboutHeroTitle: "Background, approach, and where I'm headed.",
-  aboutHeroSubtitle: "I got into cloud security because I like building things that are both functional and defensible. Here's more about how I work and what I'm focused on.",
+  aboutHeroTitle: "How I work, and what I'm building toward.",
+  aboutHeroSubtitle: "I came into cloud security to build things that are both functional and defensible. I stayed because AI-augmented work raised the ceiling on what one practitioner can actually ship.",
 
-  contactHeroTitle: "Get in touch.",
-  contactHeroSubtitle: "Review my projects or reach out directly — I'm always open to connecting with people working in cloud security.",
+  contactHeroTitle: "Open to the right next step.",
+  contactHeroSubtitle: "If you're hiring for cloud security work, building a team that uses AI seriously, or want to compare notes on practitioner workflows — reach out.",
 
   // --- Homepage Value Boxes ---
-  homeValueOneTitle: "Hands-On AWS Security Projects",
-  homeValueOneBody: "Real projects covering security architecture, hardening, detection, and infrastructure-as-code — built in AWS and documented with context.",
-  homeValueTwoTitle: "Built to Be Evaluated",
-  homeValueTwoBody: "Each project includes architecture decisions, implementation notes, and security tradeoffs — making it easier for anyone reviewing to understand the work.",
-  homeValueThreeTitle: "Always Building",
-  homeValueThreeBody: "This portfolio grows over time as I ship new projects, learn new patterns, and deepen my cloud security skills.",
+  homeValueOneTitle: "Real AWS Work, Not Slides",
+  homeValueOneBody: "Production-shaped projects in AWS &mdash; assessment, response, detection, compliance &mdash; documented with the evidence and tradeoffs a reviewer expects.",
+  homeValueTwoTitle: "AI as Multiplier, Not Magic",
+  homeValueTwoBody: "AI compresses the mechanical work so I can spend the saved time on the decisions that actually require security judgment. Every artifact here is mine.",
+  homeValueThreeTitle: "Built to Be Reviewed",
+  homeValueThreeBody: "Each project names what was in scope, what was out, and what I'd do differently next time. Honest scoping is a strength, not a hedge.",
 
-  aboutSnapshotStrength: "Building real projects instead of just studying for certs — using AI tools to ship faster and learn deeper.",
+  aboutSnapshotStrength: "Practitioner-first: I build real projects, ship them, and use AI to raise the ceiling on what one person can do without lowering the bar on what they should defend.",
 
   // --- Featured Project ---
   featuredProjectTitle: "Security Portfolio Platform in AWS",
@@ -152,20 +158,20 @@ const SITE_CONFIG = {
   starterProjectStackShort: "HTML \u2022 CSS \u2022 AWS S3 \u2022 CloudFront \u2022 Terraform",
 
   // --- Focus Areas ---
-  focusAreaOneTitle: "AWS Security Projects",
-  focusAreaOneDescription: "Hands-on projects involving AWS architecture, security controls, hardening, and cloud infrastructure — built to learn and demonstrate real implementation skills.",
-  focusAreaTwoTitle: "Detection and Security Tooling",
-  focusAreaTwoDescription: "Projects focused on logging, monitoring, detection workflows, and security tooling that strengthen cloud visibility and operational awareness.",
-  focusAreaThreeTitle: "Architecture and Technical Writeups",
-  focusAreaThreeDescription: "Structured writeups and architecture notes that explain design decisions, security reasoning, and implementation logic clearly.",
-  focusAreasSectionDesc: "These categories represent the kinds of technical work most relevant to cloud security roles and hands-on implementation.",
+  focusAreaOneTitle: "Cloud Security Assessment &amp; Response",
+  focusAreaOneDescription: "AWS posture reviews grounded in real evidence, cloud incident response from alert to written closeout, and remediation that closes process gaps not just findings.",
+  focusAreaTwoTitle: "Detection Engineering &amp; Threat Hunting",
+  focusAreaTwoDescription: "SIEM deployment, custom rule authoring tuned against real baselines, hypothesis-driven hunts, and AI-augmented investigation that keeps decisions with the practitioner.",
+  focusAreaThreeTitle: "Compliance, Audit Readiness &amp; Evidence",
+  focusAreaThreeDescription: "Trust Services Criteria control mapping, audit-grade narrative writing, evidence-to-source-system planning, and gap analysis with named owners and target dates.",
+  focusAreasSectionDesc: "Three categories of cloud security work, all shipped with the same discipline: real evidence, honest scoping, AI used responsibly.",
 
   // --- Shared Short Copy ---
-  communityShort: "A cloud security portfolio showcasing AWS projects, AI-powered workflows, and technical implementations built through the AI Cloud Security Lab.",
-  communityShorter: "AWS security projects and AI-powered cloud workflows — built, deployed, and documented.",
-  starterShort: "Cloud security projects, AWS labs, and technical writeups that show real implementation and how I think about security.",
-  starterShorter: "AWS security projects and technical writeups — real implementation, not just certifications.",
-  proofOfWorkShort: "Projects, labs, and writeups that make cloud security skills easier to evaluate — built to be seen, not just described.",
+  communityShort: "An AI-augmented cloud security portfolio: AWS projects shipped end to end, documented for review, and honest about what was in scope.",
+  communityShorter: "AI-augmented cloud security work in AWS &mdash; shipped, documented, defensible.",
+  starterShort: "Cloud security projects you can read like real engagements: scoping, evidence, decisions, limitations, lessons.",
+  starterShorter: "Cloud security work shipped and documented for the role, not the resume bullet.",
+  proofOfWorkShort: "Projects written so a reviewer can scan them in 30 seconds and a senior practitioner can see real depth on a slow read.",
 
   // --- Template Promo ---
   templatePromoTitle: "Build your own portfolio",
@@ -226,13 +232,13 @@ const SITE_CONFIG = {
   projectsCategorySectionHeading: "Project Categories",
   projectsCategorySectionDesc: "The kinds of work I'm building toward — each connected to real cloud security skills.",
   projectsUdpJoke: "Small security joke for the road: I would tell you a UDP joke, but you might not get it.",
-  projectsManifestYaml: "featured:\n  - security-portfolio-platform\n\nfocus_areas:\n  - aws-security-projects\n  - detection-and-tooling\n  - architecture-writeups\n\ngoal:\n  - show real implementation\n  - document decisions clearly\n  - make work easy to evaluate",
-  projectsManifestThemes: "AWS \u2022 Detection \u2022 Architecture",
-  projectsManifestWhatShows: "Hands-on implementation with real technical depth",
-  suggestedProjectOneTitle: "AWS Hardening Lab",
-  suggestedProjectOneDescription: "A future project focused on strengthening AWS configurations, documenting security decisions, and showing practical cloud hardening skills.",
-  suggestedProjectTwoTitle: "Detection Engineering Lab",
-  suggestedProjectTwoDescription: "A future project focused on logs, alerts, detection logic, and the practical side of improving cloud security visibility.",
+  projectsManifestYaml: "featured:\n  - security-portfolio-platform\n\nfocus_areas:\n  - assessment-and-response\n  - detection-and-hunting\n  - compliance-and-evidence\n\ndiscipline:\n  - real-evidence-not-narrative\n  - honest-scope-not-hedge\n  - ai-as-multiplier-not-magic",
+  projectsManifestThemes: "Assessment \u2022 Response \u2022 Detection \u2022 Compliance",
+  projectsManifestWhatShows: "Real cloud security work, shipped with discipline",
+  suggestedProjectOneTitle: "Your Original Project",
+  suggestedProjectOneDescription: "Drop in your own work here &mdash; a lab you built, an engagement you can write about, a side project that proves something specific. Use project-template.html as the starting structure.",
+  suggestedProjectTwoTitle: "Course Project Showcase",
+  suggestedProjectTwoDescription: "Add showcase pages from the course-pages companion repo for each AI Cloud Security Lab course you've completed. Drop the file into projects/, customize, and add a card here.",
 
   // --- Contact Page ---
   contactSchedulingCardDesc: "Skip the back-and-forth — pick a time that works and let's talk.",

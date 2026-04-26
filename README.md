@@ -1,6 +1,14 @@
 # Security Portfolio Template
 
-A practical portfolio starter for cloud security professionals who want to publish a clean, professional site quickly.
+A practical portfolio starter for cloud security professionals who want to publish a clean, professional site quickly. Designed around an AI-augmented practitioner positioning so the default copy reads like a real cloud security engineer, not a course-completion artifact.
+
+**[→ Use this template](https://github.com/botz-pillar/your-security-portfolio/generate)** to create your own copy on GitHub.
+
+**[→ STUDENT-GUIDE.md](STUDENT-GUIDE.md)** — full walkthrough: get your copy → personalize → add projects → deploy → share.
+
+**Companion repo for AI Cloud Security Lab members:** [your-security-portfolio-course-pages](https://github.com/botz-pillar/your-security-portfolio-course-pages) — pre-built project pages for each course's deliverables.
+
+---
 
 This template helps you:
 - present your background and technical approach clearly

@@ -13,20 +13,20 @@
 const SITE_CONTENT = {
 
   // --- About Page ---
-  aboutSectionOneHeading: "What Drew Me to Cloud Security",
-  aboutSectionOneBody: "I got interested in cloud security through hands-on work with AWS — building infrastructure, understanding how things connect, and seeing where the security decisions really matter. What keeps me here is the combination of problem-solving and real-world impact.",
-  aboutSectionTwoHeading: "How I Learn and Build",
-  aboutSectionTwoBody: "I learn best by building. Each project here includes real implementation decisions, clear documentation, and notes on what worked and what I'd do differently. I use AI tools to move faster and stay focused on what matters — shipping working projects that demonstrate actual skills.",
-  aboutSectionThreeHeading: "Where I'm Headed",
-  aboutSectionThreeBody: "I'm building toward cloud security roles where I can work on real infrastructure, contribute to security programs, and keep learning through implementation. This portfolio is how I make that work visible and trackable over time.",
+  aboutSectionOneHeading: "How I Work",
+  aboutSectionOneBody: "I scope tightly, name what's out, work from real evidence, and stand behind every artifact I ship. AI is a multiplier — it does the mechanical work so I can spend my hours on the decisions that require security judgment. Every project on this site has a Limitations section for the same reason: honest scoping is a strength, not a hedge.",
+  aboutSectionTwoHeading: "How AI Fits In",
+  aboutSectionTwoBody: "I use AI the way a senior practitioner uses a junior analyst — to draft, cluster, summarize, and propose. The decisions that matter still happen with me. Severity ratings, root-cause calls, audience-tailored communication, and the words that ship — all mine. The speed-up is real; the discipline is also real. That's the workflow I'd bring into a role.",
+  aboutSectionThreeHeading: "What I'm Building Toward",
+  aboutSectionThreeBody: "Cloud security work where the bar is real engagement output — assessment writeups someone can act on, incident reports that stand up to a board read, detection rules tuned against actual baselines, compliance evidence an auditor can sample. If you're hiring for that, or building a team that uses AI seriously, the projects here will tell you faster than a conversation can.",
 
-  aboutSidebarProjectsDesc: "AWS security projects, hands-on implementations, and portfolio-ready writeups that show real work.",
-  aboutSidebarArchitectureDesc: "Design decisions, security tradeoffs, and implementation notes explained clearly.",
-  aboutSidebarDirectionDesc: "A growing body of work that reflects cloud security depth, initiative, and practical execution.",
+  aboutSidebarProjectsDesc: "AWS security work shipped end-to-end — assessment, response, detection, compliance — each documented for review.",
+  aboutSidebarArchitectureDesc: "Architecture choices and tradeoffs surfaced with the reasoning behind them. Threat models when the boundary matters.",
+  aboutSidebarDirectionDesc: "A working portfolio of real projects, not a list of certifications. Updated as new work ships.",
   aboutFeatureTagOne: "AWS Security",
-  aboutFeatureTagTwo: "AI + Automation",
-  aboutFeatureTagThree: "Architecture",
-  aboutNextStepText: "Start with the projects page to see the technical work directly, or use the contact page to connect.",
+  aboutFeatureTagTwo: "AI-Augmented",
+  aboutFeatureTagThree: "Practitioner-First",
+  aboutNextStepText: "Start with the projects page to see the work directly. Reach out from the contact page if there's a fit.",
 
   // --- Portfolio Platform Project ---
   projectPortfolioOverviewHeading: "Project Overview",
