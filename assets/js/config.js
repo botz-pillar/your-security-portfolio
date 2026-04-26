@@ -127,25 +127,25 @@ const SITE_CONFIG = {
   siteTagline: "AWS Cloud Security \u2022 AI-Augmented Practitioner \u2022 Built and Shipped",
   siteTaglineShort: "AWS Cloud Security \u2022 AI-Augmented \u2022 Shipped",
 
-  homeHeroTitle: "AI-augmented cloud security work, built to be evaluated.",
-  homeHeroSubtitle: "I ship cloud security projects in AWS and use AI to move at the speed of intent — without giving up the judgment that makes the work defensible. Every project here is real. Every implementation choice is mine.",
+  homeHeroTitle: "I ship cloud security work in AWS.",
+  homeHeroSubtitle: "Assessment, response, detection, compliance — every project documented end-to-end and ready for a real review. AI compresses the mechanical work; the judgment is mine. The work below speaks for itself.",
 
-  projectsHeroTitle: "Projects you can read end to end.",
-  projectsHeroSubtitle: "AWS security work documented the way it would be reviewed in the role: evidence-backed, framework-aligned, and honest about what was in scope and what wasn't.",
+  projectsHeroTitle: "Cloud security I've shipped.",
+  projectsHeroSubtitle: "Real projects, documented end to end. Click any one — read it the way it would be reviewed in the role.",
 
-  aboutHeroTitle: "How I work, and what I'm building toward.",
-  aboutHeroSubtitle: "I came into cloud security to build things that are both functional and defensible. I stayed because AI-augmented work raised the ceiling on what one practitioner can actually ship.",
+  aboutHeroTitle: "Practitioner first.",
+  aboutHeroSubtitle: "I'm a cloud security practitioner working in AWS. AI-augmented in how I work, traditional about the bar — every project here ships only when I'd defend it in an interview. Below: how I think, how AI fits in, and what I'm building toward.",
 
   contactHeroTitle: "Open to the right next step.",
   contactHeroSubtitle: "If you're hiring for cloud security work, building a team that uses AI seriously, or want to compare notes on practitioner workflows — reach out.",
 
   // --- Homepage Value Boxes ---
   homeValueOneTitle: "Real AWS Work, Not Slides",
-  homeValueOneBody: "Production-shaped projects in AWS &mdash; assessment, response, detection, compliance &mdash; documented with the evidence and tradeoffs a reviewer expects.",
+  homeValueOneBody: "Production-shaped projects across assessment, response, detection, and compliance &mdash; each documented with the evidence and tradeoffs a real reviewer would want.",
   homeValueTwoTitle: "AI as Multiplier, Not Magic",
-  homeValueTwoBody: "AI compresses the mechanical work so I can spend the saved time on the decisions that actually require security judgment. Every artifact here is mine.",
-  homeValueThreeTitle: "Built to Be Reviewed",
-  homeValueThreeBody: "Each project names what was in scope, what was out, and what I'd do differently next time. Honest scoping is a strength, not a hedge.",
+  homeValueTwoBody: "AI compresses the mechanical hours so my judgment goes where it counts. Every artifact ships with my name on it.",
+  homeValueThreeTitle: "Honest About Scope",
+  homeValueThreeBody: "Every project names what was in scope, what was out, and what I'd do differently next time. Senior practitioners read that as a strength.",
 
   aboutSnapshotStrength: "Practitioner-first: I build real projects, ship them, and use AI to raise the ceiling on what one person can do without lowering the bar on what they should defend.",
 
@@ -158,13 +158,13 @@ const SITE_CONFIG = {
   starterProjectStackShort: "HTML \u2022 CSS \u2022 AWS S3 \u2022 CloudFront \u2022 Terraform",
 
   // --- Focus Areas ---
-  focusAreaOneTitle: "Cloud Security Assessment &amp; Response",
-  focusAreaOneDescription: "AWS posture reviews grounded in real evidence, cloud incident response from alert to written closeout, and remediation that closes process gaps not just findings.",
+  focusAreaOneTitle: "Assessment &amp; Response",
+  focusAreaOneDescription: "AWS posture reviews and cloud incident response — alert to written closeout, with remediation that closes process gaps, not just findings.",
   focusAreaTwoTitle: "Detection Engineering &amp; Threat Hunting",
-  focusAreaTwoDescription: "SIEM deployment, custom rule authoring tuned against real baselines, hypothesis-driven hunts, and AI-augmented investigation that keeps decisions with the practitioner.",
-  focusAreaThreeTitle: "Compliance, Audit Readiness &amp; Evidence",
-  focusAreaThreeDescription: "Trust Services Criteria control mapping, audit-grade narrative writing, evidence-to-source-system planning, and gap analysis with named owners and target dates.",
-  focusAreasSectionDesc: "Three categories of cloud security work, all shipped with the same discipline: real evidence, honest scoping, AI used responsibly.",
+  focusAreaTwoDescription: "SIEM deployment, custom rules tuned against real baselines, hypothesis-driven hunts, and AI-augmented investigation that keeps the calls with the practitioner.",
+  focusAreaThreeTitle: "Compliance &amp; Audit Readiness",
+  focusAreaThreeDescription: "Control mapping, audit-grade narratives, evidence-to-source-system plans, and gap analyses that name owners and target dates.",
+  focusAreasSectionDesc: "Three categories of cloud security work, shipped with the same discipline: real evidence, honest scoping, AI used responsibly.",
 
   // --- Shared Short Copy ---
   communityShort: "An AI-augmented cloud security portfolio: AWS projects shipped end to end, documented for review, and honest about what was in scope.",
