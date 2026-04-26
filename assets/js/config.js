@@ -127,14 +127,14 @@ const SITE_CONFIG = {
   siteTagline: "AWS Cloud Security \u2022 AI-Augmented Practitioner \u2022 Built and Shipped",
   siteTaglineShort: "AWS Cloud Security \u2022 AI-Augmented \u2022 Shipped",
 
-  homeHeroTitle: "I ship cloud security work in AWS.",
-  homeHeroSubtitle: "Assessment, response, detection, compliance — every project documented end-to-end and ready for a real review. AI compresses the mechanical work; the judgment is mine. The work below speaks for itself.",
+  homeHeroTitle: "I'm a cloud security practitioner. AI-augmented in how I work.",
+  homeHeroSubtitle: "I ship real cloud security work end-to-end: assessment, response, detection, compliance. Every project documented for the kind of review a real engagement gets. AI compresses the mechanical hours; the calls that matter stay with me. Read any project below for proof.",
 
   projectsHeroTitle: "Cloud security I've shipped.",
   projectsHeroSubtitle: "Real projects, documented end to end. Click any one — read it the way it would be reviewed in the role.",
 
-  aboutHeroTitle: "Practitioner first.",
-  aboutHeroSubtitle: "I'm a cloud security practitioner working in AWS. AI-augmented in how I work, traditional about the bar — every project here ships only when I'd defend it in an interview. Below: how I think, how AI fits in, and what I'm building toward.",
+  aboutHeroTitle: "I do cloud security the way the work actually shows up.",
+  aboutHeroSubtitle: "Real environments, real evidence, real decisions. AI is part of how I move; judgment is what I'm hired for. Below: how I work, how AI fits in, and where this is going.",
 
   contactHeroTitle: "Open to the right next step.",
   contactHeroSubtitle: "If you're hiring for cloud security work, building a team that uses AI seriously, or want to compare notes on practitioner workflows — reach out.",
